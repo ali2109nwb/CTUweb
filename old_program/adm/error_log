@@ -1,0 +1,5 @@
+[22-Apr-2016 11:15:58 Asia/Jakarta] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/ctuiacom/public_html/adm/connect.php on line 2
+[22-Apr-2016 11:15:58 Asia/Jakarta] PHP Warning:  mysql_select_db(): Access denied for user 'cepi'@'localhost' (using password: NO) in /home/ctuiacom/public_html/adm/connect.php on line 3
+[22-Apr-2016 11:15:58 Asia/Jakarta] PHP Warning:  mysql_select_db(): A link to the server could not be established in /home/ctuiacom/public_html/adm/connect.php on line 3
+[22-Apr-2016 11:15:58 Asia/Jakarta] PHP Warning:  mysql_query(): Access denied for user 'cepi'@'localhost' (using password: NO) in /home/ctuiacom/public_html/adm/dologin.php on line 19
+[22-Apr-2016 11:15:58 Asia/Jakarta] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ctuiacom/public_html/adm/dologin.php on line 19

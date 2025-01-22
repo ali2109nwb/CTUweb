@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<style>
+.white { 
+ color : #fff; text-decoration : none;
+}
+
+.black { 
+ color : #000; text-decoration : none;
+}
+</style>
+
+<head>
+<link rel="shortcut icon" href="ctu.png"/>
+<title>Cipta Teknik Utama</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+<div class="table-responsive">          
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2"><img  src="img/CTUA.png" width="450" height="75" /></th>
+			<th colspan="2"><div style="text-align: right"><img src="img/kananatas.jpg" width="150" height="75"/></div></th>	
+		</tr>       
+	</thead>
+	
+<tbody>
+	<tr bgcolor="#FF0000 ">
+		<th colspan="4" >
+			<a href="index.php" class="black">Home</a>&nbsp;&nbsp;
+			<a href="Products1.html" class="black">Products</a>&nbsp;&nbsp;
+			<a href="Reference.html" class="black">References</a>&nbsp;&nbsp;
+			<a href="Brosur.html" class="black">e-Brochures</a>&nbsp;&nbsp;
+			<a href="Contact-Us.html" class="black">Contact Us</a>
+		</th>
+	</tr>
+
+	<tr>
+		<th colspan="4" background="belakang.png"
+		height="500">
+			
+			<center>
+				<form action="index.php" enctype="text/plain" method="post">
+					<input type="text" name="name" placeholder="Name">
+					<input type="text" name="email" placeholder="Email">
+					<input type="text" name="company" placeholder="Company"><br/><br/>
+					<textarea name="message" rows="7" cols="70" placeholder="Your message..."></textarea><br/>
+					<input name="tambah" type="submit" id="tambah" value="Sent">
+				</form>
+			</center>
+			
+			<font color="blue" size="5"><br><br><br><br>
+				<i>Contact Us</i><br/>
+				</font><br/>
+			
+		<font size="3">Rep. Office : Jl. Danau Sunter Utara - Rukan Sunter Permai Blok A-18, Sunter 
+		Agung - Jakarta Utara 14350<br/>
+		Office : Jl. Danau Indah Tengah Blok A2 No. 12, Sunter - Jakarta Utara 14350<br/>
+		Phone : (+62)21 65302105, 29561780<br/>fax : (+62)21 6506737
+		</font>
+			
+		</th>
+	</tr>
+				
+<tr bgcolor="#958B8B" >  
+	  
+        <td>
+			<font color="red" size="3">Menu</font><hr color="red">
+			<a href="index.php" class="white">Home</a><br><br>
+			<a href="Reference.html" class="white">References</a><br><br>
+			<a href="Contact-Us.html" class="white">Contact Us</a><br><br>
+			<a href="Brosur.html" class="white">e-Brochures</a></font>
+		</td>
+		
+		<td >
+			<font color="red" size="3">Products</font><hr color="red">
+			<a href="Products.html" class="white">Walldisplay</a><br><br/>
+			<a href="video1.html" class="white">Video Processor</a><br/><br>
+			<a href="safety1.html" class="white">Safety</a></font>
+		</td>
+		
+		
+		
+		<td>
+			<font color="red" size="3">Connect with Us</font><hr color="red">
+			<font color="white" size="2">
+			<p><a href="http://www.facebook.com/ctu.indonesia" class="white"><img src="img/FooterFb.jpg" />  Facebook </a></p>
+			<p><a href="https://www.instagram.com/ciptateknikutama/" class="white"><img src="img/FooterInsta.png" />  Instagram</a></p>
+		</td>
+		
+		<td>
+			<br/><br/>
+			<br/><br/><br/><center>
+			<img src="img/new.jpg" width="150" height="75"/ ><br/><font color="black" size="2"><br>
+			Copyright © 2016 CTU
+			<br/>Website by : Kenz</center>
+		</td>
+    </tr>
+		<?
+
+$server="localhost";
+$username="root"; 
+$password="1234"; 
+$database="latihan_php"; 
+
+mysql_connect($server, $username, $password) or die ("Koneksinya Gagal");
+mysql_select_db($database) or die ("Databasenya Gak Ada"); 
+
+$nama=$_POST[nama];
+$alamat=$_POST[alamat];
+$telepon=$_POST[telepon];
+
+$input=mysql_query("INSERT INTO pengunjung (nama_pengunjung, alamat, telepon) VALUES ('$nama', '$alamat', '$telepon')");
+
+if($input)
+{
+echo "Buku tamu berhasil disimpan";
+}
+else 
+{
+echo "Buku tamu gagal disimpan";
+}
+?>
+</tbody>
+</table>
+</div>
+</div>
+
+
+</body>
+</html>

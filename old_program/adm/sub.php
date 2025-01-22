@@ -1,0 +1,1 @@
+Welcome <?php echo $_SESSION['admin'];  ?>, not <?php echo $_SESSION['admin'];  ?>? <a href="logout.php">Log out</a>

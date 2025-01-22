@@ -1,0 +1,152 @@
+#wrapper
+{
+	width:960px;
+	padding:20px;
+}
+
+#header
+{
+	float:left;
+	width:920px;
+	height:50px;
+	background-color:#CCC;
+	font:30px bold "Times New Roman", Times, serif;
+	padding:20px;
+	
+}
+#lg
+{
+		font:40px bold "Times New Roman", Times, serif;
+	
+}
+#menu
+{
+		float:left;
+		width:960px;
+		height:25px;
+		background-color:#999;
+		padding:10px 0px 10px;
+}
+#menu a
+{
+		color:#FFF;
+		text-decoration:none;
+		padding:10px 20px 0px;
+}
+#text
+{
+	border:#FFF;
+	background:#FFF;
+
+}
+#menu a:hover
+{
+		color:#FFF;
+		text-decoration:none;
+		background:#CCC;
+				padding:10px 20px 20px;
+}
+#sub
+{	float:left;
+	width:940px;
+		height:25px;
+		background-color:#CCC;
+		padding-left:20px;
+}
+#sub a
+{	
+text-decoration:none;
+color:#069;
+}
+#content
+{
+	float:left;
+	width:960px;
+
+}
+#footer
+{
+	float:left;
+	width:960px;
+		height:25px;
+		background-color:#CCC;
+		text-align:center;
+		color:#666;
+}
+#err
+{
+color:#F00;
+}
+#conus td
+{
+	height:50px;
+}
+#buttonbag
+{
+border:1px solid #999;
+height:30px;
+background-color:#999;
+color:#FFF;
+padding:5px;
+}
+#buttonbag:hover
+{
+border:1px solid #CCC;
+height:30px;
+background-color:#CCC;
+color:#FFF;
+padding:5px;
+
+}
+#tablelogin
+{
+	background-color:#CCC;
+	padding:20px;
+}
+#tableshipping th
+{
+
+	
+	border-bottom:1px solid #999;
+	border-right:1px solid #999;
+	color:#666;
+	font:12px Arial, Helvetica, sans-serif;
+	background-color:#D8D8D8;
+}
+#tableshipping td
+{
+	padding:10px 10px 10px 10px;
+	border-bottom:1px solid #999;
+	border-right:1px solid #999;
+	font:12px Arial, Helvetica, sans-serif;
+}
+#loginbutton
+{
+	background-color:#999;
+	border:1px #666 solid;
+}
+#loginbutton:hover
+{
+	background-color:#0C3;
+	border:1px #666 solid;
+}
+#tableshipping  a
+{
+	color:#666;
+	text-decoration:none;
+	border:1px solid #666;
+	padding:2px;
+	font:10px Arial, Helvetica, sans-serif;
+}
+#back
+{
+	color:#666;
+	text-decoration:none;
+	border:1px solid #666;
+	padding:2px 10px 2px;
+	font:10px Arial, Helvetica, sans-serif;
+}
+#tabcon
+{
+	padding:10px;
+}

@@ -302,24 +302,54 @@ if (isset($_POST['submit'])) {
       font-size: 0.95rem;
       color: #555;
     }
-    /* .overlay-text{
-      position: absolute;
-      color: #000;
-      text-align: center;
-      width: 100%;
-      padding: 10px;
+     /* card news */
+    .card-news {
+      position: relative;
+            width: 700px;
+            background: linear-gradient(135deg, #0c192c, #243c5a);
+            color: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
     }
-    .center-text{
-      top: 50%; 
-      transform: translateY(-50%);
-    }
-    .center-text h2{
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-    .center-text p{
-      font-size: 1rem;
-    } */
+
+    .button-news {
+            background: #0066ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: bold;
+        }
+
+        .button-news:hover {
+            background: #0052cc;
+        }
+
+        .card-news-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .card-news-content {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .divider-news {
+            width: 100%;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.2);
+            margin: 10px 0;
+        }
 
   </style>
   <!-- Bootstrap CSS (Make sure to include Bootstrap for the carousel to work) -->
@@ -327,26 +357,31 @@ if (isset($_POST['submit'])) {
 </head>
 <body>
 
+<!-- hero section -->
+<!-- <section>
+
+</section> -->
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <!-- First slide -->
     <div class="carousel-item active">
       <!-- <a href="web/detail/6"> -->
-      <img class="d-block w-100 carousel-img" src="assets/img/stoneBG.png" alt="Second slide">
+      <img class="d-block w-100 carousel-img" src="assets/img/background/hero-back.jpg" alt="Second slide">
         <div class="carousel-caption d-md-block">
-        <img class="floating-image" src="assets/img/poster530landnobg.png" alt="Second slide">
+        <!-- <div class="card-news">
+          <button class="button-news">More Info →</button>
+          <div class="card-news-title">Government Threatens to Block IMEI of iPhone 16 Sold in Indonesia</div>
+          <div class="divider-news"></div>
+          <div class="card-news-content">
+              The government through the Ministry of Industry (Kemenperin) plans to block or deactivate the International Mobile Equipment Identity (IMEI) serial number of the iPhone 16 sold in Indonesia.
+          </div>
+        <div> -->
+        <!-- <img class="floating-image" src="assets/imgbackground/hero-back.jpg" alt="Second slide"> -->
         <div class="container index">
-          <h1>Tiled Display/Wall Display</h1>
-          <h2>
-            <p> Explore Our versatile LCD Display&Video wall <br>
-               Solutions and create beautiful,<br>
-               Virtually seamless LCD Video wall Displays<br> 
-               For your Business.<br>
-            </p>
-          </h2> 
+          <h1>Your Device, Our Protection. Protecting What Matters Most</h1>
         </div>
-        <img class="batu-image" src="assets/img/backgrnd-2-1.png" alt="Second slide">
-        </div>  
+        </div> 
+    </div> 
       </a>
     </div> 
   </div>

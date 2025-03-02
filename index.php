@@ -1,28 +1,28 @@
 <?php
 if (isset($_POST['submit'])) {
-  
 
-    ini_set('display_errors', 1);
-    error_reporting(E_ALL);
 
-    $name = $_POST['name'];
+  ini_set('display_errors', 1);
+  error_reporting(E_ALL);
 
-    $from = $_POST['email'];
+  $name = $_POST['name'];
 
-    $to = "sales@ctu-indonesia.com";
+  $from = $_POST['email'];
 
-    $subject = $_POST['subject'];
+  $to = "sales@ctu-indonesia.com";
 
-    $message = $_POST['message'];
+  $subject = $_POST['subject'];
 
-    $headers = "From:" . $from;
-    if (mail($to, $subject, $message, $headers)) {
-        echo "The email message was successfully sent.";
-        echo "Thank You";
-        echo "<script>console.log('Headers: " . $headers . "' );</script>";
-    } else {
-        echo "The email message was not sent.";
-    }
+  $message = $_POST['message'];
+
+  $headers = "From:" . $from;
+  if (mail($to, $subject, $message, $headers)) {
+    echo "The email message was successfully sent.";
+    echo "Thank You";
+    echo "<script>console.log('Headers: " . $headers . "' );</script>";
+  } else {
+    echo "The email message was not sent.";
+  }
 }
 ?>
 
@@ -43,7 +43,9 @@ if (isset($_POST['submit'])) {
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -56,7 +58,8 @@ if (isset($_POST['submit'])) {
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <link rel="stylesheet" id="pps_style-css" href="assets/vendor/popup-press/css/pps_style_ver=2.9.7.css" type="text/css" media="screen">
+  <link rel="stylesheet" id="pps_style-css" href="assets/vendor/popup-press/css/pps_style_ver=2.9.7.css" type="text/css"
+    media="screen">
 
 
 
@@ -70,7 +73,8 @@ if (isset($_POST['submit'])) {
 
     .pps-popup .pps-wrap .pps-content {}
   </style>
-  <link rel="stylesheet" id="tablepress-default-css" href="assets/vendor/tablepress/css/default.min_ver=1.9.2.css" type="text/css" media="all">
+  <link rel="stylesheet" id="tablepress-default-css" href="assets/vendor/tablepress/css/default.min_ver=1.9.2.css"
+    type="text/css" media="all">
   <!-- JavaScript-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
   <!-- <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -83,33 +87,33 @@ if (isset($_POST['submit'])) {
 
 <body>
 
-<!-- ======= Top Bar ======= -->
-<!-- <section id="topbar">
+  <!-- ======= Top Bar ======= -->
+  <!-- <section id="topbar">
     <div class="container d-flex">
         <div class="contact-info mr-auto">
             <ul>
                 <li><i class="icofont-envelope"></i> <a href="mailto:sales@ctu-indonesia.com" class="email-link">sales@ctu-indonesia.com</a></li>
                  <li><i class="icofont-phone"></i> 021 65302105</li> -->
-            </ul>
-        </div>
-    </div>
-</section> 
+  </ul>
+  </div>
+  </div>
+  </section>
 
-<style>
+  <style>
     #topbar {
-        display: flex; 
-        padding: 1px 0; 
+      display: flex;
+      padding: 1px 0;
     }
 
     .email-link {
-        color: white;
-        text-decoration: none; 
+      color: white;
+      text-decoration: none;
     }
 
     .email-link:hover {
-        color: red; 
+      color: red;
     }
-</style>
+  </style>
 
 
   <!-- ======= Header ======= -->
@@ -125,7 +129,7 @@ if (isset($_POST['submit'])) {
           <li class="active"><a href="#header">Home</a></li>
           <li><a href="#about">About</a></li>
           <li class><a href="#product">Product</a></li>
-         
+
           <li><a href="web/references">References</a></li>
           <li class><a href="news">News</a></li>
           <li><a href="web/detail/6">Contact</a></li>
@@ -135,273 +139,568 @@ if (isset($_POST['submit'])) {
     </div>
   </header><!-- End Header -->
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom Size Carousel</title>
-  <style>
-   
-    .carousel-item {
-      position: relative;
-      height: 650px; /* Set the carousel height to a fixed size */
-    }
+  <!DOCTYPE html>
+  <html lang="en">
 
-    .carousel-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* Ensures the image covers the entire container without stretching */
-      object-position: center;
-    }
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Size Carousel</title>
+    <style>
+      .carousel-item {
+        position: relative;
+        height: 650px;
+        /* Set the carousel height to a fixed size */
+      }
 
-    /* Define the animation for the text */
-    @keyframes fadeInUp {
-      0% {
+      .carousel-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Ensures the image covers the entire container without stretching */
+        object-position: center;
+      }
+
+      /* Define the animation for the text */
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(110px);
+          /* Start with text lower and invisible */
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateY(50px);
+          /* End with text in place and fully visible */
+        }
+      }
+
+      .carousel-caption {
+        padding: 20px;
+        color: white;
+        /* Ensures the text is visible on most images */
+        background: none !important;
+        /* Completely remove any background color */
         opacity: 0;
-        transform: translateY(110px); /* Start with text lower and invisible */
+        /* Start with invisible text */
       }
-      100% {
-        opacity: 1;
-        transform: translateY(50px); /* End with text in place and fully visible */
+
+      .carousel-item.active .carousel-caption {
+        animation: fadeInUp 1s ease-in-out forwards;
+        /* Apply the animation when active */
       }
-    }
 
-    .carousel-caption {
-      padding: 20px;
-      color: white; /* Ensures the text is visible on most images */
-      background: none !important; /* Completely remove any background color */
-      opacity: 0; /* Start with invisible text */
-    }
+      /* Move the left control further to the left */
+      .carousel-control-prev {
+        left: -80px !important;
+        /* Move button more to the left */
+      }
 
-    .carousel-item.active .carousel-caption {
-      animation: fadeInUp 1s ease-in-out forwards; /* Apply the animation when active */
-    }
+      /* Move the right control further to the right */
+      .carousel-control-next {
+        right: -80px !important;
+        /* Move button more to the right */
+      }
 
-    /* Move the left control further to the left */
-    .carousel-control-prev {
-      left: -80px !important; /* Move button more to the left */
-    }
+      /* Optional - customize the controls */
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Darken the control icons */
+        border-radius: 50%;
+      }
 
-    /* Move the right control further to the right */
-    .carousel-control-next {
-      right: -80px !important; /* Move button more to the right */
-    }
+      .batu-image {
+        position: absolute;
+        top: -50px;
+        width: 780px;
+        right: 0px;
+        left: -240px;
+        z-index: 0;
+      }
 
-    /* Optional - customize the controls */
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      background-color: rgba(0, 0, 0, 0.5); /* Darken the control icons */
-      border-radius: 50%;
-    }
+      .floating-image {
+        position: absolute;
+        top: -120px;
+        width: 650px;
+        right: -40px;
+        z-index: 0;
+      }
 
-    .batu-image {
-      position: absolute;
-      top: -50px;
-      width: 780px;
-      right: 0px;
-      left: -240px;
-      z-index: 0;
-    }
+      .index {
+        z-index: 20;
+      }
 
-    .floating-image {
-      position: absolute;
-      top: -120px;
-      width: 650px;
-      right: -40px;
-      z-index: 0;
-    }
+      .img-featured,
+      .img-featured img {
+        width: 65%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-    .index {
-      z-index: 20;
-    }
+      .description {
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 1rem;
+      }
 
-    .img-featured, .img-featured img{
-      width: 65%;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .description{
-      color: rgba(0, 0, 0, 0.6);
-      font-size: 1rem;
-    }
-    .border-logo{
-      /* background-color: rgba(180, 185, 201, 0.08); */
-      border-radius: 20px;
-      flex: 0 0 auto;
-      overflow: hidden;
-      position: relative;
-      height: auto;
-      width: auto;
-      padding: 10px;
-    }
+      .border-logo {
+        /* background-color: rgba(180, 185, 201, 0.08); */
+        border-radius: 20px;
+        flex: 0 0 auto;
+        overflow: hidden;
+        position: relative;
+        height: auto;
+        width: auto;
+        padding: 10px;
+      }
 
-    .btn-product{
-      margin-top: 10px;
-      height: 50px;
-      width: auto;
-      padding: 15px;
-      background: linear-gradient(271deg, rgb(255, 84, 84) 0%, rgb(255, 84, 84) 100%) rgb(255, 84, 84);
-      color: white;
-      text-decoration: none;
-      border-radius: 15px;
-    }
+      .btn-product {
+        margin-top: 10px;
+        height: 50px;
+        width: auto;
+        padding: 15px;
+        background: linear-gradient(271deg, rgb(255, 84, 84) 0%, rgb(255, 84, 84) 100%) rgb(255, 84, 84);
+        color: white;
+        text-decoration: none;
+        border-radius: 15px;
+      }
 
-    .btn-product:hover{
-      margin-top: 10px;
-      height: 50px;
-      width: auto;
-      padding: 15px;
-      background: lightskyblue;
-      color: white;
-      text-decoration: none;
-      border-radius: 15px;
-    }
+      .btn-product:hover {
+        margin-top: 10px;
+        height: 50px;
+        width: auto;
+        padding: 15px;
+        background: lightskyblue;
+        color: white;
+        text-decoration: none;
+        border-radius: 15px;
+      }
 
-    /* Fitured Solutions css */
-    .fitur-solutions {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-      gap: 30px; 
-      padding: 120px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+      /* Fitured Solutions css */
+      .fitur-solutions {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        padding: 120px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
 
-    .card {
-      position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-      background-color: #fff;
-      transition: transform 0.3s ease-in-out;
-    }
+      .card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        background-color: #fff;
+        transition: transform 0.3s ease-in-out;
+      }
 
-    .card:hover {
-      transform: translateY(-10px); 
-    }
+      .card:hover {
+        transform: translateY(-10px);
+      }
 
-    .card-image {
-      width: 100%;
-      height: 200px; 
-      object-fit: cover; 
-    }
+      .card-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
 
-    .card-content {
-      padding: 15px;
-      text-align: center;
-    }
+      .card-content {
+        padding: 15px;
+        text-align: center;
+      }
 
-    .card-content h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      color: #ff7b00; 
-    }
-    .card-content p {
-      font-size: 0.95rem;
-      color: #555;
-    }
-     /* card news */
-    .card-news {
-      position: relative;
-            width: 700px;
-            background: linear-gradient(135deg, #0c192c, #243c5a);
-            color: white;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-    }
+      .card-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: #ff7b00;
+      }
 
-    .button-news {
-            background: #0066ff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-size: 14px;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            font-weight: bold;
+      .card-content p {
+        font-size: 0.95rem;
+        color: #555;
+      }
+
+      /* card news */
+      .card-news {
+        position: relative;
+        width: 700px;
+        background: linear-gradient(135deg, #0c192c, #243c5a);
+        color: white;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .button-news {
+        background: #0066ff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 14px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-weight: bold;
+      }
+
+      .button-news:hover {
+        background: #0052cc;
+      }
+
+      .card-news-title {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .card-news-content {
+        font-size: 14px;
+        opacity: 0.8;
+      }
+
+      .divider-news {
+        width: 100%;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.2);
+        margin: 10px 0;
+      }
+
+      .featured-container-solution {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        padding: 40px;
+      }
+
+      .featured-background-solution {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .text-section-solution {
+        flex: 1;
+        text-align: left;
+        position: relative;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        transition: background 0.3s ease-in-out;
+      }
+
+      .text-section-solution:hover {
+        background: rgba(0, 107, 255, 0.2);
+        cursor: pointer;
+      }
+
+      .content-wrapper-solution {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 40px;
+      }
+
+      .text-section-solution {
+        flex: 1;
+        text-align: left;
+      }
+
+      .text-section-solution h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .text-section-solution p {
+        font-size: 16px;
+        color: #555;
+      }
+
+      .divider-solution {
+        width: 2px;
+        height: 100px;
+        background: #007bff;
+      }
+
+      .card-container-solution {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .card-row-solution {
+        display: flex;
+        gap: 20px;
+      }
+
+      .card-solution {
+        width: 220px;
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .card-solution:hover {
+        transform: translateY(-5px);
+      }
+
+      .card-icon-solution {
+        width: 50px;
+        margin-bottom: 10px;
+      }
+
+      .card-solution h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .card-solution p {
+        font-size: 14px;
+        color: #555;
+      }
+
+      .card-line-solution {
+        width: 60px;
+        height: 3px;
+        background: #007bff;
+        margin: 10px auto 0 auto;
+      }
+
+      /* Main Section */
+      .about-section {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 80px 10%;
+        background-color: #f5f5f5;
+        /* Light Background */
+        overflow: hidden;
+      }
+
+      /* Text Container */
+      .about-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+        z-index: 2;
+      }
+
+      /* Heading */
+      .about-text h1 {
+        font-family: 'Outfit', sans-serif;
+        font-size: 53px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: rgb(11, 53, 88);
+        margin-bottom: 20px;
+      }
+
+      /* Paragraph */
+      .about-text p {
+        font-size: 18px;
+        color: rgb(11, 53, 88);
+        line-height: 1.6;
+        max-width: 600px;
+      }
+
+      /* Background Shapes */
+      .background-shape {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        background: rgba(11, 53, 88, 0.2);
+        border-radius: 50%;
+        z-index: 1;
+        filter: blur(20px);
+      }
+
+      /* Positioning Background Shapes */
+      .shape-1 {
+        top: 10%;
+        left: 5%;
+        transform: rotate(20deg);
+      }
+
+      .shape-2 {
+        top: 50%;
+        right: 10%;
+        transform: rotate(27deg);
+      }
+
+      .shape-3 {
+        bottom: 20%;
+        left: 20%;
+        transform: rotate(80deg);
+      }
+
+      .shape-4 {
+        bottom: 40%;
+        right: 15%;
+        transform: rotate(53deg);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .about-text h1 {
+          font-size: 40px;
         }
 
-        .button-news:hover {
-            background: #0052cc;
+        .about-text p {
+          font-size: 16px;
         }
 
-        .card-news-title {
-            font-size: 20px;
-            font-weight: bold;
+        .background-shape {
+          width: 80px;
+          height: 80px;
         }
+      }
+    </style>
+    <!-- Bootstrap CSS (Make sure to include Bootstrap for the carousel to work) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  </head>
 
-        .card-news-content {
-            font-size: 14px;
-            opacity: 0.8;
-        }
+  <body>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <!-- First slide -->
+        <div class="carousel-item active">
+          <img class="d-block w-100 carousel-img" src="assets/img/background/hero-back.jpg" alt="Background Image">
 
-        .divider-news {
-            width: 100%;
-            height: 1px;
-            background: rgba(255, 255, 255, 0.2);
-            margin: 10px 0;
-        }
+          <!-- Overlay for text content -->
+          <div class="carousel-caption d-md-block text-overlay"
+            style="position: absolute; top: -10%; left: 10%; color: white; text-align: left; width: 80%;">
+            <div class="container">
+              <!-- Main Heading -->
+              <h1 class="hero-text"
+                style="font-size: 50px; font-weight: bold; line-height: 1.2; max-width: 500px; margin-bottom: 20px;">
+                Your Device, Our Protection. <br>
+                Protecting What Matters Most
+              </h1>
 
-  </style>
-  <!-- Bootstrap CSS (Make sure to include Bootstrap for the carousel to work) -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-<body>
+              <!-- News Section with Button -->
+              <div class="news-container" style="display: flex; align-items: center; margin-top: 10px;">
+                <button class="info-btn"
+                  style="background-color: #246BFD; color: white; border: none; padding: 12px 20px; 
+                                font-size: 16px; font-weight: bold; border-radius: 8px; cursor: pointer; margin-right: 15px;">
+                  More Info →
+                </button>
+              </div>
 
-<!-- hero section -->
-<!-- <section>
-</section> -->
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <!-- First slide -->
-    <div class="carousel-item active">
-      <!-- <a href="web/detail/6"> -->
-      <img class="d-block w-100 carousel-img" src="assets/img/background/hero-back.jpg" alt="Second slide">
-        <div class="carousel-caption d-md-block">
-        <!-- <div class="card-news">
-          <button class="button-news">More Info →</button>
-          <div class="card-news-title">Government Threatens to Block IMEI of iPhone 16 Sold in Indonesia</div>
-          <div class="divider-news"></div>
-          <div class="card-news-content">
-              The government through the Ministry of Industry (Kemenperin) plans to block or deactivate the International Mobile Equipment Identity (IMEI) serial number of the iPhone 16 sold in Indonesia.
+              <!-- News Box -->
+              <div class="news-box" style="background: rgba(0, 0, 0, 0.6); padding: 15px 20px; border-radius: 10px; 
+                            border: 1px solid rgba(255, 255, 255, 0.5); max-width: 600px; text-align: center;">
+                <h2 style="font-size: 22px; font-weight: bold; color: white; margin-bottom: 10px;">
+                  Government Threatens to Block IMEI of iPhone 16 Sold in Indonesia
+                </h2>
+                <p style="font-size: 16px; color: rgba(255, 255, 255, 0.8); line-height: 1.5;">
+                  The government through the Ministry of Industry (Kemenperin) plans to block or deactivate |
+                  the IMEI serial number of the iPhone 16 sold in Indonesia.
+                </p>
+              </div>
+            </div>
           </div>
-        <div> -->
-        <!-- <img class="floating-image" src="assets/imgbackground/hero-back.jpg" alt="Second slide"> -->
-        <div class="container index">
-          <h1>Your Device, Our Protection. Protecting What Matters Most</h1>
         </div>
-        </div> 
-    </div> 
-      </a>
-    </div> 
+      </div>
+    </div>
+
+
+    <!-- Bootstrap JS and dependencies (jQuery and Popper.js) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.amazonaws.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </body>
+
+  </html>
+
+
+  <!-- ======= Fitured Solutions ======= -->
+  <div class="featured-container-solution">
+    <img src="assets/img/background/featured-back.jpeg" alt="Background" class="featured-background-solution">
+
+    <div class="overlay-text-solution">
+      <div class="content-wrapper-solution">
+        <div class="text-section-solution">
+          <h2>Featured Solution</h2>
+          <p>Discover the emerging age of competency and talent via innovative methods.</p>
+        </div>
+
+        <div class="divider-solution"></div>
+
+        <div class="card-container-solution">
+          <div class="card-row-solution">
+            <div class="card-solution">
+              <img src="assets/img/icons/consulting.png" alt="Consulting" class="card-icon-solution">
+              <h3>Consulting</h3>
+              <p>Built for Extreme Conditions. Our devices are engineered to withstand harsh environments.</p>
+              <div class="card-line-solution"></div>
+            </div>
+            <div class="card-solution">
+              <img src="assets/img/icons/design.png" alt="Design" class="card-icon-solution">
+              <h3>Design</h3>
+              <p>Stay Connected Anywhere. Experience swift and efficient communication.</p>
+              <div class="card-line-solution"></div>
+            </div>
+          </div>
+          <div class="card-row-solution">
+            <div class="card-solution">
+              <img src="assets/img/icons/maintenance.png" alt="Maintenance" class="card-icon-solution">
+              <h3>Maintenance</h3>
+              <p>Monitor your team with real-time location tracking and centralized tools.</p>
+              <div class="card-line-solution"></div>
+            </div>
+            <div class="card-solution">
+              <img src="assets/img/icons/integration.png" alt="Integration" class="card-icon-solution">
+              <h3>Integration</h3>
+              <p>Seamlessly integrate our devices into your digital infrastructure.</p>
+              <div class="card-line-solution"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
 
-<!-- Bootstrap JS and dependencies (jQuery and Popper.js) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.amazonaws.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <section class="about-section">
+    <div class="about-container">
+      <!-- Left Text Content -->
+      <div class="about-text">
+        <h1>We design it, we make it real</h1>
+        <p>We create modern meeting spaces equipped with sleek LED TVs, combining functionality and style.
+          Designed for productivity and comfort, we turn your vision of the perfect meeting room into reality.</p>
+      </div>
 
-</body>
-</html>
-
-
-    <!-- ======= Fitured Solutions ======= -->
-    <div class="overlay-text" style="position: absolute; color: #000; text-align: center; width: 100%; padding: 20px; margin-bottom: 50px margin-top: 10px">
-      <h2>Featured Solution</h2>
-      <p>Discover the future of productivity and efficiency with innovative solutions.</p>
+      <!-- Background Elements -->
+      <div class="background-shape shape-1"></div>
+      <div class="background-shape shape-2"></div>
+      <div class="background-shape shape-3"></div>
+      <div class="background-shape shape-4"></div>
     </div>
-    </div>
-    <div class="fitur-solutions"> 
+  </section>
+
+
+  <div class="fitur-solutions">
     <!-- Box 1 -->
     <div class="card">
       <img src="assets/img/930poster.png" alt="Safety Image" class="card-image">
@@ -435,98 +734,104 @@ if (isset($_POST['submit'])) {
       </div>
     </div>
   </div>
-    <section id="clients" class="clients" style="background: radial-gradient(34.7% 46.7% at 105.1% 40.6%, rgb(179, 233, 255) 10.0768%, rgba(255, 255, 255, 0.25) 56.0414%, rgba(255, 255, 255, 0) 100%),radial-gradient(60% 40.4% at -33.7% 30.5%, rgb(198, 158, 255) 0%, rgb(255, 255, 255) 100%);">
-      <div class="container" data-aos="fade-up" style="margin-bottom: 50px;">
-        <h1 data-aos="fade-up" class="text-center"><strong>Our Partners</strong></h1>
-        <div style="height: 40px"></div>
-        <div class="owl-carousel clients-carousel">
-            <img class="border-logo" src="assets/img/clients/agille.png" alt="Agille Mobile" class="border-logo">
-            <img class="border-logo" src="assets/img/clients/bartec.png" alt="Bartec Pixavi">
-            <img class="border-logo" src="assets/img/clients/client-1.png" alt="Vewell">
-            <img class="border-logo" src="assets/img/clients/client-4.png" alt="Bliz">
-            <img class="border-logo" src="assets/img/clients/client-5.png" alt="FireBlock">
-            <img class="border-logo" src="assets/img/clients/Logo_New_April_2022.png" alt="i.safe Mobile">
-            <img class="border-logo" src="assets/img/clients/RugGear_Logo_Black.png" alt="RugGear">
-            <img class="border-logo" src="assets/img/clients/Bright_LED_Logo.png" alt="BrightLED">
-          </div>
-        </div>
 
-      </div>
-
-      <div class="container" data-aos="fade-up">
-        <h1 data-aos="fade-up" class="text-center"><strong>Our Clients</strong></h1>
-        <div style="height: 40px"></div>
-        <div class="owl-carousel clients-carousel">
-
-          <img class="border-logo" src="assets/img/clients/basarnas.png" alt="Basarnas">
-
-          <img class="border-logo" src="assets/img/clients/pertamina.png" alt="Pertamina">
-
-          <img class="border-logo" src="assets/img/clients/gbi.png" alt="GBI MOI">
-
-          <img class="border-logo" src="assets/img/clients/bms.png" alt="Bank Mandiri Syariah">
-
-          <img class="border-logo" src="assets/img/clients/kemensos.png" alt="Kementerian Sosial">
-
-          <img class="border-logo" src="assets/img/clients/telkom.png" alt="Telkom">
-
-          <img class="border-logo" src="assets/img/clients/jasamarga.png" alt="Jasamarga">
-        </div>
-      </div>
-    </section>
-
-<section id="product" class="values" src="https://framerusercontent.com/images/MuT6IoXsdmAkYegkSf7FacB2b8Y.jpg" style="background: linear-gradient(90deg, rgba(0,162,233,1) 0%, rgba(0,162,233,1) 48%, rgba(230,33,41,1) 100%);">
-  <div class="container">
-    <div class="section-title" data-aos="fade-up">
-      <h1><strong>Our Products</strong></h1>
-    </div>
-     <div class="row text-center p-0">
-      <div class="col-md-4">
-        <img decoding="async" loading="lazy" src="assets/img/bartec.png" alt="" style="display: block; width: 100%; height: 100%; border-radius: inherit; object-position: center center; object-fit: cover;">
-      </div>
-      <div class="col-md-4">
-        <div class="action-product py-5">
-          <h5 class="text-center">Check Our Product</h5>
-          <br>
-          <div class="btn mx-5">
-          <a href="" class="btn-product">SEE MORE PRODUCT</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <img decoding="async" loading="lazy" src="assets/img/bartec.png" alt="" style="display: block; width: 100%; height: 100%; border-radius: inherit; object-position: center center; object-fit: cover;">
+  <section id="clients" class="clients"
+    style="background: radial-gradient(34.7% 46.7% at 105.1% 40.6%, rgb(179, 233, 255) 10.0768%, rgba(255, 255, 255, 0.25) 56.0414%, rgba(255, 255, 255, 0) 100%),radial-gradient(60% 40.4% at -33.7% 30.5%, rgb(198, 158, 255) 0%, rgb(255, 255, 255) 100%);">
+    <div class="container" data-aos="fade-up" style="margin-bottom: 50px;">
+      <h1 data-aos="fade-up" class="text-center"><strong>Our Partners</strong></h1>
+      <div style="height: 40px"></div>
+      <div class="owl-carousel clients-carousel">
+        <img class="border-logo" src="assets/img/clients/agille.png" alt="Agille Mobile" class="border-logo">
+        <img class="border-logo" src="assets/img/clients/bartec.png" alt="Bartec Pixavi">
+        <img class="border-logo" src="assets/img/clients/client-1.png" alt="Vewell">
+        <img class="border-logo" src="assets/img/clients/client-4.png" alt="Bliz">
+        <img class="border-logo" src="assets/img/clients/client-5.png" alt="FireBlock">
+        <img class="border-logo" src="assets/img/clients/Logo_New_April_2022.png" alt="i.safe Mobile">
+        <img class="border-logo" src="assets/img/clients/RugGear_Logo_Black.png" alt="RugGear">
+        <img class="border-logo" src="assets/img/clients/Bright_LED_Logo.png" alt="BrightLED">
       </div>
     </div>
-  </div>
-</section>
+
+    </div>
+
+    <div class="container" data-aos="fade-up">
+      <h1 data-aos="fade-up" class="text-center"><strong>Our Clients</strong></h1>
+      <div style="height: 40px"></div>
+      <div class="owl-carousel clients-carousel">
+
+        <img class="border-logo" src="assets/img/clients/basarnas.png" alt="Basarnas">
+
+        <img class="border-logo" src="assets/img/clients/pertamina.png" alt="Pertamina">
+
+        <img class="border-logo" src="assets/img/clients/gbi.png" alt="GBI MOI">
+
+        <img class="border-logo" src="assets/img/clients/bms.png" alt="Bank Mandiri Syariah">
+
+        <img class="border-logo" src="assets/img/clients/kemensos.png" alt="Kementerian Sosial">
+
+        <img class="border-logo" src="assets/img/clients/telkom.png" alt="Telkom">
+
+        <img class="border-logo" src="assets/img/clients/jasamarga.png" alt="Jasamarga">
+      </div>
+    </div>
+  </section>
+
+  <section id="product" class="values" src="https://framerusercontent.com/images/MuT6IoXsdmAkYegkSf7FacB2b8Y.jpg"
+    style="background: linear-gradient(90deg, rgba(0,162,233,1) 0%, rgba(0,162,233,1) 48%, rgba(230,33,41,1) 100%);">
+    <div class="container">
+      <div class="section-title" data-aos="fade-up">
+        <h1><strong>Our Products</strong></h1>
+      </div>
+      <div class="row text-center p-0">
+        <div class="col-md-4">
+          <img decoding="async" loading="lazy" src="assets/img/bartec.png" alt=""
+            style="display: block; width: 100%; height: 100%; border-radius: inherit; object-position: center center; object-fit: cover;">
+        </div>
+        <div class="col-md-4">
+          <div class="action-product py-5">
+            <h5 class="text-center">Check Our Product</h5>
+            <br>
+            <div class="btn mx-5">
+              <a href="" class="btn-product">SEE MORE PRODUCT</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <img decoding="async" loading="lazy" src="assets/img/bartec.png" alt=""
+            style="display: block; width: 100%; height: 100%; border-radius: inherit; object-position: center center; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
 
   <!-- ======= Footer ======= -->
-  <footer id="footer" style="background-color: black; color: white; padding: 20px 0; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.5;">
+  <footer id="footer"
+    style="background-color: black; color: white; padding: 20px 0; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.5;">
 
-<div class="container" style="max-width: 1200px; margin: 0 auto;">
-    <div class="row" style="display: flex; flex-wrap: wrap; align-items: flex-start;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+      <div class="row" style="display: flex; flex-wrap: wrap; align-items: flex-start;">
 
         <!-- Logo dan Company Info -->
         <div class="col-lg-3 col-md-6 footer-contact" style="flex: 1; min-width: 200px; margin-bottom: 20px;">
-            <h3 style="font-size: 18px; font-weight: bold; margin: 0;">PT Cipta Teknik Utama</h3>
-            <p style="margin: 5px 0 0;">
-            
-            </p>
+          <h3 style="font-size: 18px; font-weight: bold; margin: 0;">PT Cipta Teknik Utama</h3>
+          <p style="margin: 5px 0 0;">
+
+          </p>
         </div>
 
         <!-- Headquarters -->
         <div class="col-lg-2 col-md-6 footer-links" style="flex: 1; min-width: 180px; margin-bottom: 20px;">
-            <h4 style="font-size: 16px; font-weight: bold; margin-bottom: 10px;">Headquarter</h4>
-            <p style="margin: 0;">Sedayu City, Blok GSOC No. 20 Cakung Barat, Jakarta Timur</p>
+          <h4 style="font-size: 16px; font-weight: bold; margin-bottom: 10px;">Headquarter</h4>
+          <p style="margin: 0;">Sedayu City, Blok GSOC No. 20 Cakung Barat, Jakarta Timur</p>
         </div>
 
         <!-- Workshop -->
         <div class="col-lg-2 col-md-6 footer-links" style="flex: 1; min-width: 180px; margin-bottom: 20px;">
-            <h4 style="font-size: 16px; font-weight: bold; margin-bottom: 10px;">Workshop</h4>
-            <p style="margin: 0;">Bizpark Cakung, Blok 6 No. 56 & 58, Cakung Timur Jakarta Timur</p>
+          <h4 style="font-size: 16px; font-weight: bold; margin-bottom: 10px;">Workshop</h4>
+          <p style="margin: 0;">Bizpark Cakung, Blok 6 No. 56 & 58, Cakung Timur Jakarta Timur</p>
         </div>
 
         <!-- Administration -->
@@ -537,46 +842,52 @@ if (isset($_POST['submit'])) {
 -->
         <!-- Other Pages -->
         <div class="col-lg-2 col-md-6 footer-links" style="flex: 1; min-width: 180px; margin-bottom: 20px;">
-            <h4 style="font-size: 16px; font-weight: bold; margin-bottom: 10px;">Other Pages</h4>
-            <ul style="list-style: none; padding: 0; margin: 0;">
-                <li><a href="#about" style="color: white; text-decoration: none;">About Us</a></li>
-                <li><a href="#product" style="color: white; text-decoration: none;">Product</a></li>
-                <li><a href="web/detail/6" style="color: white; text-decoration: none;">Contact</a></li>
-            </ul>
+          <h4 style="font-size: 16px; font-weight: bold; margin-bottom: 10px;">Other Pages</h4>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li><a href="#about" style="color: white; text-decoration: none;">About Us</a></li>
+            <li><a href="#product" style="color: white; text-decoration: none;">Product</a></li>
+            <li><a href="web/detail/6" style="color: white; text-decoration: none;">Contact</a></li>
+          </ul>
         </div>
 
         <!-- Stay Connected -->
         <div class="col-lg-3 col-md-6 footer-contact" style="flex: 1; min-width: 200px; margin-bottom: 20px;">
-            <h4 style="font-size: 16px; font-weight: bold; margin-bottom: 10px;">Stay Connected</h4>
-            <p style="margin: 0;">
-                <a href="#" style="color: white; text-decoration: none; margin-right: 10px;">LinkedIn</a> 
-                <a href="#" style="color: white; text-decoration: none; margin-right: 10px;">Email</a> 
-                <a href="#" style="color: white; text-decoration: none; margin-right: 10px;">WhatsApp</a> 
-                <a href="#" style="color: white; text-decoration: none;">Instagram</a>
-                <br>
-                <a href="mailto:sales@ctu-indonesia.com" class="email-link" style="color: white; text-decoration: none; margin-right: 10px;">Email: sales@ctu-indonesia.com</a>
-                <br>
-                Phone: 021 65302105
-            </p>
+          <h4 style="font-size: 16px; font-weight: bold; margin-bottom: 10px;">Stay Connected</h4>
+          <p style="margin: 0;">
+            <a href="#" style="color: white; text-decoration: none; margin-right: 10px;">LinkedIn</a>
+            <a href="#" style="color: white; text-decoration: none; margin-right: 10px;">Email</a>
+            <a href="#" style="color: white; text-decoration: none; margin-right: 10px;">WhatsApp</a>
+            <a href="#" style="color: white; text-decoration: none;">Instagram</a>
+            <br>
+            <a href="mailto:sales@ctu-indonesia.com" class="email-link"
+              style="color: white; text-decoration: none; margin-right: 10px;">Email: sales@ctu-indonesia.com</a>
+            <br>
+            Phone: 021 65302105
+          </p>
         </div>
 
+      </div>
     </div>
-</div>
 
-<div class="container text-center" style="margin-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.3); padding-top: 10px;">
-    <p style="margin: 0;">© 2024, PT Cipta Teknik Utama.</p>
-</div>
-</footer>
+    <div class="container text-center"
+      style="margin-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.3); padding-top: 10px;">
+      <p style="margin: 0;">© 2024, PT Cipta Teknik Utama.</p>
+    </div>
+  </footer>
 
   <!-- Tiled Display / Wall Display -->
-  <div id="popuppress-709" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":" 640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":" absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
+  <div id="popuppress-709" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":"
+    640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":"
+    absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
     <div class="pps-wrap">
-      <div class="pps-close"><a href="#" class="pps-close-link-709 pps-close-link" id="pps-close-link-709" title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
+      <div class="pps-close"><a href="#" class="pps-close-link-709 pps-close-link" id="pps-close-link-709"
+          title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
       <div class="pps-content">
         <div class="pps-single-popup">
           <li class="pps-item-content">
             <div class="pps-content-wp-editor entry-content post-content">
-              <p><img class="alignnone size-medium wp-image-1281 aligncenter" src="assets/doc//Vewell/Wall-Display.png" alt="LOGO" width="150" height="300"></p>
+              <p><img class="alignnone size-medium wp-image-1281 aligncenter" src="assets/doc//Vewell/Wall-Display.png"
+                  alt="LOGO" width="150" height="300"></p>
               <h3><b>Panel Parameters</b></h3>
 
               <table id="tablepress-4" class="tablepress tablepress-id-4">
@@ -700,7 +1011,9 @@ if (isset($_POST['submit'])) {
               <p style="text-align:center">For Details</p>
               <div style="text-align: center;">
                 <span style="margin: 6px 0px;" class="separator transparent">
-                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification" onclick="window.location.href='assets/doc/Vewell/Brosur Vewell Tiled Video Wall.pdf'">Download Brosur</a>
+                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification"
+                    onclick="window.location.href='assets/doc/Vewell/Brosur Vewell Tiled Video Wall.pdf'">Download
+                    Brosur</a>
                 </span>
               </div>
 
@@ -874,9 +1187,9 @@ if (isset($_POST['submit'])) {
 
 
   <script type="text/javascript">
-    jQuery(document).ready(function($) {
+    jQuery(document).ready(function ($) {
 
-      jQuery(document).delegate(".pps-button-popup-709,a[href='pps-button-popup-709'],a[href='#pps-button-popup-709']", "click ", function(e) {
+      jQuery(document).delegate(".pps-button-popup-709,a[href='pps-button-popup-709'],a[href='#pps-button-popup-709']", "click ", function (e) {
         e.preventDefault();
 
         startAtNum = (jQuery(this).hasClass("pps-button-thumb")) ? jQuery(this).attr("class").split(" ").pop().replace(/[^0-9\.]/g, "") : 0;
@@ -895,7 +1208,7 @@ if (isset($_POST['submit'])) {
           escClose: true,
           follow: [true, true],
           scrollBar: true,
-          onOpen: function() {
+          onOpen: function () {
             manageSizeEmbedPopupPress(706, 460);
             manageSizeIframePopupPress(706, 460);
             manageSizePdfPopupPress(706, 460);
@@ -903,10 +1216,10 @@ if (isset($_POST['submit'])) {
             onOpenPopupPress(706);
             disclaimerPopupPress(706, "false", "same_page", "close_page", "false", "current_session", 1);
           },
-          onClose: function() {
+          onClose: function () {
             onClosePopupPress(709);
           },
-        }, function() {
+        }, function () {
           openedPopupPress(709);
         }); //end bPopup
 
@@ -916,14 +1229,18 @@ if (isset($_POST['submit'])) {
   </script>
 
   <!-- Interactive Display -->
-  <div id="popuppress-711" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":" 640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":" absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
+  <div id="popuppress-711" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":"
+    640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":"
+    absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
     <div class="pps-wrap">
-      <div class="pps-close"><a href="#" class="pps-close-link-711 pps-close-link" id="pps-close-link-711" title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
+      <div class="pps-close"><a href="#" class="pps-close-link-711 pps-close-link" id="pps-close-link-711"
+          title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
       <div class="pps-content">
         <div class="pps-single-popup">
           <li class="pps-item-content">
             <div class="pps-content-wp-editor entry-content post-content">
-              <p><img class="alignnone size-medium wp-image-1281 aligncenter" src="assets/doc//Vewell/Interactive-Display.png" alt="LOGO" width="127" height="300"></p>
+              <p><img class="alignnone size-medium wp-image-1281 aligncenter"
+                  src="assets/doc//Vewell/Interactive-Display.png" alt="LOGO" width="127" height="300"></p>
               <h3><b>Display</b></h3>
 
               <table id="tablepress-4" class="tablepress tablepress-id-4">
@@ -1041,7 +1358,9 @@ if (isset($_POST['submit'])) {
               <p style="text-align:center">For Details</p>
               <div style="text-align: center;">
                 <span style="margin: 6px 0px;" class="separator transparent">
-                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification" onclick="window.location.href='assets/doc/Vewell/Brosur Vewell Interactive Display (Smartboard Conference).pdf'">Download Brosur</a>
+                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification"
+                    onclick="window.location.href='assets/doc/Vewell/Brosur Vewell Interactive Display (Smartboard Conference).pdf'">Download
+                    Brosur</a>
                   <!-- <li style="text-align:center" ><a href="assets/doc/Vewell/Brosur Vewell Interactive Display (Smartboard Conference).pdf">Interactive Display</a></li> -->
                 </span>
               </div>
@@ -1216,9 +1535,9 @@ if (isset($_POST['submit'])) {
 
 
   <script type="text/javascript">
-    jQuery(document).ready(function($) {
+    jQuery(document).ready(function ($) {
 
-      jQuery(document).delegate(".pps-button-popup-711,a[href='pps-button-popup-711'],a[href='#pps-button-popup-711']", "click ", function(e) {
+      jQuery(document).delegate(".pps-button-popup-711,a[href='pps-button-popup-711'],a[href='#pps-button-popup-711']", "click ", function (e) {
         e.preventDefault();
 
         startAtNum = (jQuery(this).hasClass("pps-button-thumb")) ? jQuery(this).attr("class").split(" ").pop().replace(/[^0-9\.]/g, "") : 0;
@@ -1237,7 +1556,7 @@ if (isset($_POST['submit'])) {
           escClose: true,
           follow: [true, true],
           scrollBar: true,
-          onOpen: function() {
+          onOpen: function () {
             manageSizeEmbedPopupPress(706, 460);
             manageSizeIframePopupPress(706, 460);
             manageSizePdfPopupPress(706, 460);
@@ -1245,10 +1564,10 @@ if (isset($_POST['submit'])) {
             onOpenPopupPress(706);
             disclaimerPopupPress(706, "false", "same_page", "close_page", "false", "current_session", 1);
           },
-          onClose: function() {
+          onClose: function () {
             onClosePopupPress(711);
           },
-        }, function() {
+        }, function () {
           openedPopupPress(711);
         }); //end bPopup
 
@@ -1258,14 +1577,18 @@ if (isset($_POST['submit'])) {
   </script>
 
   <!-- Digital Signage/Kiosk -->
-  <div id="popuppress-713" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":" 640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":" absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
+  <div id="popuppress-713" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":"
+    640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":"
+    absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
     <div class="pps-wrap">
-      <div class="pps-close"><a href="#" class="pps-close-link-713 pps-close-link" id="pps-close-link-713" title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
+      <div class="pps-close"><a href="#" class="pps-close-link-713 pps-close-link" id="pps-close-link-713"
+          title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
       <div class="pps-content">
         <div class="pps-single-popup">
           <li class="pps-item-content">
             <div class="pps-content-wp-editor entry-content post-content">
-              <p><img class="alignnone size-medium wp-image-1281 aligncenter" src="assets/doc//Vewell/Digital-Signage-Kiosk.png" alt="LOGO" width="127" height="300"></p>
+              <p><img class="alignnone size-medium wp-image-1281 aligncenter"
+                  src="assets/doc//Vewell/Digital-Signage-Kiosk.png" alt="LOGO" width="127" height="300"></p>
               <h3><b>Technical Specification - VS-430</b></h3>
 
               <table id="tablepress-4" class="tablepress tablepress-id-4">
@@ -1372,7 +1695,8 @@ if (isset($_POST['submit'])) {
               <p style="text-align:center">For Details</p>
               <div style="text-align: center;">
                 <span style="margin: 6px 0px;" class="separator transparent">
-                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification" onclick="window.location.href='assets/doc/Vewell/Kiosk Brochure CTU 2020.pdf'">Download Brosur</a>
+                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification"
+                    onclick="window.location.href='assets/doc/Vewell/Kiosk Brochure CTU 2020.pdf'">Download Brosur</a>
                 </span>
               </div>
 
@@ -1546,9 +1870,9 @@ if (isset($_POST['submit'])) {
 
 
   <script type="text/javascript">
-    jQuery(document).ready(function($) {
+    jQuery(document).ready(function ($) {
 
-      jQuery(document).delegate(".pps-button-popup-713,a[href='pps-button-popup-713'],a[href='#pps-button-popup-713']", "click ", function(e) {
+      jQuery(document).delegate(".pps-button-popup-713,a[href='pps-button-popup-713'],a[href='#pps-button-popup-713']", "click ", function (e) {
         e.preventDefault();
 
         startAtNum = (jQuery(this).hasClass("pps-button-thumb")) ? jQuery(this).attr("class").split(" ").pop().replace(/[^0-9\.]/g, "") : 0;
@@ -1567,7 +1891,7 @@ if (isset($_POST['submit'])) {
           escClose: true,
           follow: [true, true],
           scrollBar: true,
-          onOpen: function() {
+          onOpen: function () {
             manageSizeEmbedPopupPress(706, 460);
             manageSizeIframePopupPress(706, 460);
             manageSizePdfPopupPress(706, 460);
@@ -1575,10 +1899,10 @@ if (isset($_POST['submit'])) {
             onOpenPopupPress(706);
             disclaimerPopupPress(706, "false", "same_page", "close_page", "false", "current_session", 1);
           },
-          onClose: function() {
+          onClose: function () {
             onClosePopupPress(713);
           },
-        }, function() {
+        }, function () {
           openedPopupPress(713);
         }); //end bPopup
 
@@ -1588,9 +1912,12 @@ if (isset($_POST['submit'])) {
   </script>
 
   <!-- LED Indoor -->
-  <div id="popuppress-715" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":" 640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":" absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
+  <div id="popuppress-715" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":"
+    640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":"
+    absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
     <div class="pps-wrap">
-      <div class="pps-close"><a href="#" class="pps-close-link-715 pps-close-link" id="pps-close-link-715" title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
+      <div class="pps-close"><a href="#" class="pps-close-link-715 pps-close-link" id="pps-close-link-715"
+          title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
       <div class="pps-content">
         <div class="pps-single-popup">
           <li class="pps-item-content">
@@ -1704,7 +2031,9 @@ if (isset($_POST['submit'])) {
               <p style="text-align:center">For Details</p>
               <div style="text-align: center;">
                 <span style="margin: 6px 0px;" class="separator transparent">
-                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification" onclick="window.location.href='assets/doc/Vewell/Vewell Indoor Outdoor LED - 2021.pdf'">Download Brosur</a>
+                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification"
+                    onclick="window.location.href='assets/doc/Vewell/Vewell Indoor Outdoor LED - 2021.pdf'">Download
+                    Brosur</a>
                 </span>
               </div>
 
@@ -1878,9 +2207,9 @@ if (isset($_POST['submit'])) {
 
 
   <script type="text/javascript">
-    jQuery(document).ready(function($) {
+    jQuery(document).ready(function ($) {
 
-      jQuery(document).delegate(".pps-button-popup-715,a[href='pps-button-popup-715'],a[href='#pps-button-popup-715']", "click ", function(e) {
+      jQuery(document).delegate(".pps-button-popup-715,a[href='pps-button-popup-715'],a[href='#pps-button-popup-715']", "click ", function (e) {
         e.preventDefault();
 
         startAtNum = (jQuery(this).hasClass("pps-button-thumb")) ? jQuery(this).attr("class").split(" ").pop().replace(/[^0-9\.]/g, "") : 0;
@@ -1899,7 +2228,7 @@ if (isset($_POST['submit'])) {
           escClose: true,
           follow: [true, true],
           scrollBar: true,
-          onOpen: function() {
+          onOpen: function () {
             manageSizeEmbedPopupPress(706, 460);
             manageSizeIframePopupPress(706, 460);
             manageSizePdfPopupPress(706, 460);
@@ -1907,10 +2236,10 @@ if (isset($_POST['submit'])) {
             onOpenPopupPress(706);
             disclaimerPopupPress(706, "false", "same_page", "close_page", "false", "current_session", 1);
           },
-          onClose: function() {
+          onClose: function () {
             onClosePopupPress(715);
           },
-        }, function() {
+        }, function () {
           openedPopupPress(715);
         }); //end bPopup
 
@@ -1920,9 +2249,12 @@ if (isset($_POST['submit'])) {
   </script>
 
   <!-- LED Outdoor -->
-  <div id="popuppress-717" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":" 640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":" absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
+  <div id="popuppress-717" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":"
+    640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":"
+    absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
     <div class="pps-wrap">
-      <div class="pps-close"><a href="#" class="pps-close-link-717 pps-close-link" id="pps-close-link-717" title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
+      <div class="pps-close"><a href="#" class="pps-close-link-717 pps-close-link" id="pps-close-link-717"
+          title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
       <div class="pps-content">
         <div class="pps-single-popup">
           <li class="pps-item-content">
@@ -2035,7 +2367,9 @@ if (isset($_POST['submit'])) {
               <p style="text-align:center">For Details</p>
               <div style="text-align: center;">
                 <span style="margin: 6px 0px;" class="separator transparent">
-                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification" onclick="window.location.href='assets/doc/Vewell/Vewell Indoor Outdoor LED - 2021.pdf'">Download Brosur</a>
+                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification"
+                    onclick="window.location.href='assets/doc/Vewell/Vewell Indoor Outdoor LED - 2021.pdf'">Download
+                    Brosur</a>
                 </span>
               </div>
 
@@ -2209,9 +2543,9 @@ if (isset($_POST['submit'])) {
 
 
   <script type="text/javascript">
-    jQuery(document).ready(function($) {
+    jQuery(document).ready(function ($) {
 
-      jQuery(document).delegate(".pps-button-popup-717,a[href='pps-button-popup-717'],a[href='#pps-button-popup-717']", "click ", function(e) {
+      jQuery(document).delegate(".pps-button-popup-717,a[href='pps-button-popup-717'],a[href='#pps-button-popup-717']", "click ", function (e) {
         e.preventDefault();
 
         startAtNum = (jQuery(this).hasClass("pps-button-thumb")) ? jQuery(this).attr("class").split(" ").pop().replace(/[^0-9\.]/g, "") : 0;
@@ -2230,7 +2564,7 @@ if (isset($_POST['submit'])) {
           escClose: true,
           follow: [true, true],
           scrollBar: true,
-          onOpen: function() {
+          onOpen: function () {
             manageSizeEmbedPopupPress(706, 460);
             manageSizeIframePopupPress(706, 460);
             manageSizePdfPopupPress(706, 460);
@@ -2238,10 +2572,10 @@ if (isset($_POST['submit'])) {
             onOpenPopupPress(706);
             disclaimerPopupPress(706, "false", "same_page", "close_page", "false", "current_session", 1);
           },
-          onClose: function() {
+          onClose: function () {
             onClosePopupPress(717);
           },
-        }, function() {
+        }, function () {
           openedPopupPress(717);
         }); //end bPopup
 
@@ -2251,14 +2585,18 @@ if (isset($_POST['submit'])) {
   </script>
 
   <!-- Multiviewer Processor -->
-  <div id="popuppress-719" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":" 640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":" absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
+  <div id="popuppress-719" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":"
+    640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":"
+    absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
     <div class="pps-wrap">
-      <div class="pps-close"><a href="#" class="pps-close-link-719 pps-close-link" id="pps-close-link-719" title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
+      <div class="pps-close"><a href="#" class="pps-close-link-719 pps-close-link" id="pps-close-link-719"
+          title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
       <div class="pps-content">
         <div class="pps-single-popup">
           <li class="pps-item-content">
             <div class="pps-content-wp-editor entry-content post-content">
-              <p><img class="alignnone size-medium wp-image-1281 aligncenter" src="assets/doc/Vewell/Multiviewer Processor.png" alt="LOGO" width="300" height="300"></p>
+              <p><img class="alignnone size-medium wp-image-1281 aligncenter"
+                  src="assets/doc/Vewell/Multiviewer Processor.png" alt="LOGO" width="300" height="300"></p>
               <h3><b>Technical Parameters</b></h3>
 
               <table id="tablepress-4" class="tablepress tablepress-id-4">
@@ -2271,7 +2609,8 @@ if (isset($_POST['submit'])) {
                   <tr class="row-2">
                     <td class="column-1">Input Resolution<br>
                     </td>
-                    <td class="column-2">1920x 1200/60Hz, 1080p, compatible of all standard resolutions and can be costumized<br>
+                    <td class="column-2">1920x 1200/60Hz, 1080p, compatible of all standard resolutions and can be
+                      costumized<br>
                     </td>
                   </tr>
                   <tr class="row-3">
@@ -2282,7 +2621,8 @@ if (isset($_POST['submit'])) {
                   <tr class="row-4">
                     <td class="column-1">Power Supply<br>
                     </td>
-                    <td class="column-2">Dual power supplies 100-240VAC, 50/60Hz, more trustable hot swappable power supply
+                    <td class="column-2">Dual power supplies 100-240VAC, 50/60Hz, more trustable hot swappable power
+                      supply
                       working mode, internationally self-adaptive power</td>
                   </tr>
                   <tr class="row-5">
@@ -2316,7 +2656,9 @@ if (isset($_POST['submit'])) {
               <p style="text-align:center">For Details</p>
               <div style="text-align: center;">
                 <span style="margin: 6px 0px;" class="separator transparent">
-                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification" onclick="window.location.href='assets/doc/Vewell/Brosur Vewell Multiviewer Processor.pdf'">Download Brosur</a>
+                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification"
+                    onclick="window.location.href='assets/doc/Vewell/Brosur Vewell Multiviewer Processor.pdf'">Download
+                    Brosur</a>
                 </span>
               </div>
 
@@ -2490,9 +2832,9 @@ if (isset($_POST['submit'])) {
 
 
   <script type="text/javascript">
-    jQuery(document).ready(function($) {
+    jQuery(document).ready(function ($) {
 
-      jQuery(document).delegate(".pps-button-popup-719,a[href='pps-button-popup-719'],a[href='#pps-button-popup-719']", "click ", function(e) {
+      jQuery(document).delegate(".pps-button-popup-719,a[href='pps-button-popup-719'],a[href='#pps-button-popup-719']", "click ", function (e) {
         e.preventDefault();
 
         startAtNum = (jQuery(this).hasClass("pps-button-thumb")) ? jQuery(this).attr("class").split(" ").pop().replace(/[^0-9\.]/g, "") : 0;
@@ -2511,7 +2853,7 @@ if (isset($_POST['submit'])) {
           escClose: true,
           follow: [true, true],
           scrollBar: true,
-          onOpen: function() {
+          onOpen: function () {
             manageSizeEmbedPopupPress(706, 460);
             manageSizeIframePopupPress(706, 460);
             manageSizePdfPopupPress(706, 460);
@@ -2519,10 +2861,10 @@ if (isset($_POST['submit'])) {
             onOpenPopupPress(706);
             disclaimerPopupPress(706, "false", "same_page", "close_page", "false", "current_session", 1);
           },
-          onClose: function() {
+          onClose: function () {
             onClosePopupPress(719);
           },
-        }, function() {
+        }, function () {
           openedPopupPress(719);
         }); //end bPopup
 
@@ -2532,14 +2874,18 @@ if (isset($_POST['submit'])) {
   </script>
 
   <!-- Wireless Presentation -->
-  <div id="popuppress-721" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":" 640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":" absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
+  <div id="popuppress-721" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":"
+    640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":"
+    absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
     <div class="pps-wrap">
-      <div class="pps-close"><a href="#" class="pps-close-link-721 pps-close-link" id="pps-close-link-721" title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
+      <div class="pps-close"><a href="#" class="pps-close-link-721 pps-close-link" id="pps-close-link-721"
+          title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
       <div class="pps-content">
         <div class="pps-single-popup">
           <li class="pps-item-content">
             <div class="pps-content-wp-editor entry-content post-content">
-              <p><img class="alignnone size-medium wp-image-1281 aligncenter" src="assets/doc/Vewell/Wireless-Presentation.png" alt="LOGO" width="300" height="300"></p>
+              <p><img class="alignnone size-medium wp-image-1281 aligncenter"
+                  src="assets/doc/Vewell/Wireless-Presentation.png" alt="LOGO" width="300" height="300"></p>
               <h3><b>Technical Specification</b></h3>
 
               <table id="tablepress-4" class="tablepress tablepress-id-4">
@@ -2605,7 +2951,9 @@ if (isset($_POST['submit'])) {
               <p style="text-align:center">For Details</p>
               <div style="text-align: center;">
                 <span style="margin: 6px 0px;" class="separator transparent">
-                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification" onclick="window.location.href='assets/doc/Vewell/Brosur Vewell Wireless Presentation.pdf'">Download Brosur</a>
+                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification"
+                    onclick="window.location.href='assets/doc/Vewell/Brosur Vewell Wireless Presentation.pdf'">Download
+                    Brosur</a>
                 </span>
               </div>
 
@@ -2779,9 +3127,9 @@ if (isset($_POST['submit'])) {
 
 
   <script type="text/javascript">
-    jQuery(document).ready(function($) {
+    jQuery(document).ready(function ($) {
 
-      jQuery(document).delegate(".pps-button-popup-721,a[href='pps-button-popup-721'],a[href='#pps-button-popup-721']", "click ", function(e) {
+      jQuery(document).delegate(".pps-button-popup-721,a[href='pps-button-popup-721'],a[href='#pps-button-popup-721']", "click ", function (e) {
         e.preventDefault();
 
         startAtNum = (jQuery(this).hasClass("pps-button-thumb")) ? jQuery(this).attr("class").split(" ").pop().replace(/[^0-9\.]/g, "") : 0;
@@ -2800,7 +3148,7 @@ if (isset($_POST['submit'])) {
           escClose: true,
           follow: [true, true],
           scrollBar: true,
-          onOpen: function() {
+          onOpen: function () {
             manageSizeEmbedPopupPress(706, 460);
             manageSizeIframePopupPress(706, 460);
             manageSizePdfPopupPress(706, 460);
@@ -2808,10 +3156,10 @@ if (isset($_POST['submit'])) {
             onOpenPopupPress(706);
             disclaimerPopupPress(706, "false", "same_page", "close_page", "false", "current_session", 1);
           },
-          onClose: function() {
+          onClose: function () {
             onClosePopupPress(721);
           },
-        }, function() {
+        }, function () {
           openedPopupPress(721);
         }); //end bPopup
 
@@ -2822,14 +3170,18 @@ if (isset($_POST['submit'])) {
 
 
   <!-- RugGear -->
-  <div id="popuppress-723" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":" 640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":" absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
+  <div id="popuppress-723" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":"
+    640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":"
+    absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
     <div class="pps-wrap">
-      <div class="pps-close"><a href="#" class="pps-close-link-723 pps-close-link" id="pps-close-link-723" title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
+      <div class="pps-close"><a href="#" class="pps-close-link-723 pps-close-link" id="pps-close-link-723"
+          title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
       <div class="pps-content">
         <div class="pps-single-popup">
           <li class="pps-item-content">
             <div class="pps-content-wp-editor entry-content post-content">
-              <p><img class="alignnone size-medium wp-image-1281 aligncenter" src="assets/doc/Mobile Phone/rugGear.png" alt="LOGO" width="300" height="300"></p>
+              <p><img class="alignnone size-medium wp-image-1281 aligncenter" src="assets/doc/Mobile Phone/rugGear.png"
+                  alt="LOGO" width="300" height="300"></p>
               <h3><b>Technical Specification</b></h3>
 
               <table id="tablepress-4" class="tablepress tablepress-id-4">
@@ -2867,7 +3219,8 @@ if (isset($_POST['submit'])) {
               <p style="text-align:center">For Details</p>
               <div style="text-align: center;">
                 <span style="margin: 6px 0px;" class="separator transparent">
-                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification" onclick="window.location.href='assets/doc/Mobile Phone/Brosur Ruggerar.pdf'">Download Brosur</a>
+                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification"
+                    onclick="window.location.href='assets/doc/Mobile Phone/Brosur Ruggerar.pdf'">Download Brosur</a>
                 </span>
               </div>
 
@@ -3041,9 +3394,9 @@ if (isset($_POST['submit'])) {
 
 
   <script type="text/javascript">
-    jQuery(document).ready(function($) {
+    jQuery(document).ready(function ($) {
 
-      jQuery(document).delegate(".pps-button-popup-723,a[href='pps-button-popup-723'],a[href='#pps-button-popup-723']", "click ", function(e) {
+      jQuery(document).delegate(".pps-button-popup-723,a[href='pps-button-popup-723'],a[href='#pps-button-popup-723']", "click ", function (e) {
         e.preventDefault();
 
         startAtNum = (jQuery(this).hasClass("pps-button-thumb")) ? jQuery(this).attr("class").split(" ").pop().replace(/[^0-9\.]/g, "") : 0;
@@ -3062,7 +3415,7 @@ if (isset($_POST['submit'])) {
           escClose: true,
           follow: [true, true],
           scrollBar: true,
-          onOpen: function() {
+          onOpen: function () {
             manageSizeEmbedPopupPress(706, 460);
             manageSizeIframePopupPress(706, 460);
             manageSizePdfPopupPress(706, 460);
@@ -3070,10 +3423,10 @@ if (isset($_POST['submit'])) {
             onOpenPopupPress(706);
             disclaimerPopupPress(706, "false", "same_page", "close_page", "false", "current_session", 1);
           },
-          onClose: function() {
+          onClose: function () {
             onClosePopupPress(723);
           },
-        }, function() {
+        }, function () {
           openedPopupPress(723);
         }); //end bPopup
 
@@ -3083,14 +3436,18 @@ if (isset($_POST['submit'])) {
   </script>
 
   <!-- iSafe -->
-  <div id="popuppress-725" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":" 640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":" absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
+  <div id="popuppress-725" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":"
+    640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":"
+    absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
     <div class="pps-wrap">
-      <div class="pps-close"><a href="#" class="pps-close-link-725 pps-close-link" id="pps-close-link-725" title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
+      <div class="pps-close"><a href="#" class="pps-close-link-725 pps-close-link" id="pps-close-link-725"
+          title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
       <div class="pps-content">
         <div class="pps-single-popup">
           <li class="pps-item-content">
             <div class="pps-content-wp-editor entry-content post-content">
-              <p><img class="alignnone size-medium wp-image-1281 aligncenter" src="assets/doc/Mobile Phone/iSafe.png" alt="LOGO" width="300" height="300"></p>
+              <p><img class="alignnone size-medium wp-image-1281 aligncenter" src="assets/doc/Mobile Phone/iSafe.png"
+                  alt="LOGO" width="300" height="300"></p>
               <h3><b>Technical Specification</b></h3>
 
               <table id="tablepress-4" class="tablepress tablepress-id-4">
@@ -3125,7 +3482,8 @@ if (isset($_POST['submit'])) {
                   <tr class="row-6">
                     <td class="column-1">WI-FI<br>
                     </td>
-                    <td class="column-2">2,4GHz + 5GHz: IEEE 802.11a/ b/g/n/ac/e/k/r/h with max. 8 connections hotspot</td>
+                    <td class="column-2">2,4GHz + 5GHz: IEEE 802.11a/ b/g/n/ac/e/k/r/h with max. 8 connections hotspot
+                    </td>
                   </tr>
                   <tr class="row-7">
                     <td class="column-1">NFC<br>
@@ -3143,7 +3501,8 @@ if (isset($_POST['submit'])) {
               <p style="text-align:center">For Details</p>
               <div style="text-align: center;">
                 <span style="margin: 6px 0px;" class="separator transparent">
-                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification" onclick="window.location.href='assets/doc/Mobile Phone/Brosur i.safe.pdf'">Download Brosur</a>
+                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification"
+                    onclick="window.location.href='assets/doc/Mobile Phone/Brosur i.safe.pdf'">Download Brosur</a>
                 </span>
               </div>
 
@@ -3317,9 +3676,9 @@ if (isset($_POST['submit'])) {
 
 
   <script type="text/javascript">
-    jQuery(document).ready(function($) {
+    jQuery(document).ready(function ($) {
 
-      jQuery(document).delegate(".pps-button-popup-725,a[href='pps-button-popup-725'],a[href='#pps-button-popup-725']", "click ", function(e) {
+      jQuery(document).delegate(".pps-button-popup-725,a[href='pps-button-popup-725'],a[href='#pps-button-popup-725']", "click ", function (e) {
         e.preventDefault();
 
         startAtNum = (jQuery(this).hasClass("pps-button-thumb")) ? jQuery(this).attr("class").split(" ").pop().replace(/[^0-9\.]/g, "") : 0;
@@ -3338,7 +3697,7 @@ if (isset($_POST['submit'])) {
           escClose: true,
           follow: [true, true],
           scrollBar: true,
-          onOpen: function() {
+          onOpen: function () {
             manageSizeEmbedPopupPress(706, 460);
             manageSizeIframePopupPress(706, 460);
             manageSizePdfPopupPress(706, 460);
@@ -3346,10 +3705,10 @@ if (isset($_POST['submit'])) {
             onOpenPopupPress(706);
             disclaimerPopupPress(706, "false", "same_page", "close_page", "false", "current_session", 1);
           },
-          onClose: function() {
+          onClose: function () {
             onClosePopupPress(725);
           },
-        }, function() {
+        }, function () {
           openedPopupPress(725);
         }); //end bPopup
 
@@ -3359,14 +3718,18 @@ if (isset($_POST['submit'])) {
   </script>
 
   <!-- Agille -->
-  <div id="popuppress-727" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":" 640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":" absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
+  <div id="popuppress-727" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":"
+    640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":"
+    absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
     <div class="pps-wrap">
-      <div class="pps-close"><a href="#" class="pps-close-link-727 pps-close-link" id="pps-close-link-727" title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
+      <div class="pps-close"><a href="#" class="pps-close-link-727 pps-close-link" id="pps-close-link-727"
+          title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
       <div class="pps-content">
         <div class="pps-single-popup">
           <li class="pps-item-content">
             <div class="pps-content-wp-editor entry-content post-content">
-              <p><img class="alignnone size-medium wp-image-1281 aligncenter" src="assets/doc/Agille Mobile/AgilleMobile.png" alt="LOGO" width="300" height="300"></p>
+              <p><img class="alignnone size-medium wp-image-1281 aligncenter"
+                  src="assets/doc/Agille Mobile/AgilleMobile.png" alt="LOGO" width="300" height="300"></p>
               <h3><b>Technical Specification</b></h3>
 
               <table id="tablepress-4" class="tablepress tablepress-id-4">
@@ -3425,7 +3788,9 @@ if (isset($_POST['submit'])) {
               <p style="text-align:center">For Details</p>
               <div style="text-align: center;">
                 <span style="margin: 6px 0px;" class="separator transparent">
-                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification" onclick="window.location.href='assets/doc/Agille Mobile/Brosur Agille Mobile.pdf'">Download Brosur</a>
+                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification"
+                    onclick="window.location.href='assets/doc/Agille Mobile/Brosur Agille Mobile.pdf'">Download
+                    Brosur</a>
                 </span>
               </div>
 
@@ -3599,9 +3964,9 @@ if (isset($_POST['submit'])) {
 
 
   <script type="text/javascript">
-    jQuery(document).ready(function($) {
+    jQuery(document).ready(function ($) {
 
-      jQuery(document).delegate(".pps-button-popup-727,a[href='pps-button-popup-727'],a[href='#pps-button-popup-727']", "click ", function(e) {
+      jQuery(document).delegate(".pps-button-popup-727,a[href='pps-button-popup-727'],a[href='#pps-button-popup-727']", "click ", function (e) {
         e.preventDefault();
 
         startAtNum = (jQuery(this).hasClass("pps-button-thumb")) ? jQuery(this).attr("class").split(" ").pop().replace(/[^0-9\.]/g, "") : 0;
@@ -3620,7 +3985,7 @@ if (isset($_POST['submit'])) {
           escClose: true,
           follow: [true, true],
           scrollBar: true,
-          onOpen: function() {
+          onOpen: function () {
             manageSizeEmbedPopupPress(706, 460);
             manageSizeIframePopupPress(706, 460);
             manageSizePdfPopupPress(706, 460);
@@ -3628,10 +3993,10 @@ if (isset($_POST['submit'])) {
             onOpenPopupPress(706);
             disclaimerPopupPress(706, "false", "same_page", "close_page", "false", "current_session", 1);
           },
-          onClose: function() {
+          onClose: function () {
             onClosePopupPress(727);
           },
-        }, function() {
+        }, function () {
           openedPopupPress(727);
         }); //end bPopup
 
@@ -3641,14 +4006,18 @@ if (isset($_POST['submit'])) {
   </script>
 
   <!-- Bartec -->
-  <div id="popuppress-729" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":" 640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":" absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
+  <div id="popuppress-729" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":"
+    640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":"
+    absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
     <div class="pps-wrap">
-      <div class="pps-close"><a href="#" class="pps-close-link-729 pps-close-link" id="pps-close-link-729" title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
+      <div class="pps-close"><a href="#" class="pps-close-link-729 pps-close-link" id="pps-close-link-729"
+          title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
       <div class="pps-content">
         <div class="pps-single-popup">
           <li class="pps-item-content">
             <div class="pps-content-wp-editor entry-content post-content">
-              <p><img class="alignnone size-medium wp-image-1281 aligncenter" src="assets/doc/Bartec/Bartec.png" alt="LOGO" width="300" height="300"></p>
+              <p><img class="alignnone size-medium wp-image-1281 aligncenter" src="assets/doc/Bartec/Bartec.png"
+                  alt="LOGO" width="300" height="300"></p>
               <h3><b>Technical Specification</b></h3>
 
               <table id="tablepress-4" class="tablepress tablepress-id-4">
@@ -3668,7 +4037,8 @@ if (isset($_POST['submit'])) {
                   <tr class="row-2">
                     <td class="column-1"> Battery <br>
                     </td>
-                    <td class="column-2"> 3.200 mAh (Replaceable) Must only be changed and charged outside of potentially explosive atmosphere<br>
+                    <td class="column-2"> 3.200 mAh (Replaceable) Must only be changed and charged outside of
+                      potentially explosive atmosphere<br>
                     </td>
                   </tr>
                   <tr class="row-3">
@@ -3707,7 +4077,8 @@ if (isset($_POST['submit'])) {
               <p style="text-align:center">For Details</p>
               <div style="text-align: center;">
                 <span style="margin: 6px 0px;" class="separator transparent">
-                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification" onclick="window.location.href='assets/doc/Bartec/Brosur Bartec.pdf'">Download Brosur</a>
+                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification"
+                    onclick="window.location.href='assets/doc/Bartec/Brosur Bartec.pdf'">Download Brosur</a>
                 </span>
               </div>
 
@@ -3881,9 +4252,9 @@ if (isset($_POST['submit'])) {
 
 
   <script type="text/javascript">
-    jQuery(document).ready(function($) {
+    jQuery(document).ready(function ($) {
 
-      jQuery(document).delegate(".pps-button-popup-729,a[href='pps-button-popup-729'],a[href='#pps-button-popup-729']", "click ", function(e) {
+      jQuery(document).delegate(".pps-button-popup-729,a[href='pps-button-popup-729'],a[href='#pps-button-popup-729']", "click ", function (e) {
         e.preventDefault();
 
         startAtNum = (jQuery(this).hasClass("pps-button-thumb")) ? jQuery(this).attr("class").split(" ").pop().replace(/[^0-9\.]/g, "") : 0;
@@ -3902,7 +4273,7 @@ if (isset($_POST['submit'])) {
           escClose: true,
           follow: [true, true],
           scrollBar: true,
-          onOpen: function() {
+          onOpen: function () {
             manageSizeEmbedPopupPress(706, 460);
             manageSizeIframePopupPress(706, 460);
             manageSizePdfPopupPress(706, 460);
@@ -3910,10 +4281,10 @@ if (isset($_POST['submit'])) {
             onOpenPopupPress(706);
             disclaimerPopupPress(706, "false", "same_page", "close_page", "false", "current_session", 1);
           },
-          onClose: function() {
+          onClose: function () {
             onClosePopupPress(729);
           },
-        }, function() {
+        }, function () {
           openedPopupPress(729);
         }); //end bPopup
 
@@ -3923,14 +4294,18 @@ if (isset($_POST['submit'])) {
   </script>
 
   <!-- BLITZ Lightning Protection System -->
-  <div id="popuppress-731" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":" 640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":" absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
+  <div id="popuppress-731" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":"
+    640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":"
+    absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
     <div class="pps-wrap">
-      <div class="pps-close"><a href="#" class="pps-close-link-731 pps-close-link" id="pps-close-link-731" title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
+      <div class="pps-close"><a href="#" class="pps-close-link-731 pps-close-link" id="pps-close-link-731"
+          title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
       <div class="pps-content">
         <div class="pps-single-popup">
           <li class="pps-item-content">
             <div class="pps-content-wp-editor entry-content post-content">
-              <p><img class="alignnone size-medium wp-image-1281 aligncenter" src="assets/doc/Blitz/Blitz-Lightning.png" alt="LOGO" width="300" height="300"></p>
+              <p><img class="alignnone size-medium wp-image-1281 aligncenter" src="assets/doc/Blitz/Blitz-Lightning.png"
+                  alt="LOGO" width="300" height="300"></p>
               <h3><b>Technical Specification - Lightning Strike Counter BZ-2</b></h3>
 
               <table id="tablepress-4" class="tablepress tablepress-id-4">
@@ -3984,7 +4359,8 @@ if (isset($_POST['submit'])) {
               <p style="text-align:center">For Details</p>
               <div style="text-align: center;">
                 <span style="margin: 6px 0px;" class="separator transparent">
-                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification" onclick="window.location.href='assets/doc/Blitz/Brosur Blitz.pdf'">Download Brosur</a>
+                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification"
+                    onclick="window.location.href='assets/doc/Blitz/Brosur Blitz.pdf'">Download Brosur</a>
                 </span>
               </div>
 
@@ -4156,13 +4532,13 @@ if (isset($_POST['submit'])) {
     }
   </style>
 
-   
+
 
 
   <script type="text/javascript">
-    jQuery(document).ready(function($) {
+    jQuery(document).ready(function ($) {
 
-      jQuery(document).delegate(".pps-button-popup-731,a[href='pps-button-popup-731'],a[href='#pps-button-popup-731']", "click ", function(e) {
+      jQuery(document).delegate(".pps-button-popup-731,a[href='pps-button-popup-731'],a[href='#pps-button-popup-731']", "click ", function (e) {
         e.preventDefault();
 
         startAtNum = (jQuery(this).hasClass("pps-button-thumb")) ? jQuery(this).attr("class").split(" ").pop().replace(/[^0-9\.]/g, "") : 0;
@@ -4181,7 +4557,7 @@ if (isset($_POST['submit'])) {
           escClose: true,
           follow: [true, true],
           scrollBar: true,
-          onOpen: function() {
+          onOpen: function () {
             manageSizeEmbedPopupPress(706, 460);
             manageSizeIframePopupPress(706, 460);
             manageSizePdfPopupPress(706, 460);
@@ -4189,10 +4565,10 @@ if (isset($_POST['submit'])) {
             onOpenPopupPress(706);
             disclaimerPopupPress(706, "false", "same_page", "close_page", "false", "current_session", 1);
           },
-          onClose: function() {
+          onClose: function () {
             onClosePopupPress(731);
           },
-        }, function() {
+        }, function () {
           openedPopupPress(731);
         }); //end bPopup
 
@@ -4202,14 +4578,18 @@ if (isset($_POST['submit'])) {
   </script>
 
   <!-- Fireblock -->
-  <div id="popuppress-733" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":" 640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":" absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
+  <div id="popuppress-733" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":"
+    640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":"
+    absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
     <div class="pps-wrap">
-      <div class="pps-close"><a href="#" class="pps-close-link-733 pps-close-link" id="pps-close-link-733" title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
+      <div class="pps-close"><a href="#" class="pps-close-link-733 pps-close-link" id="pps-close-link-733"
+          title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
       <div class="pps-content">
         <div class="pps-single-popup">
           <li class="pps-item-content">
             <div class="pps-content-wp-editor entry-content post-content">
-              <p><img class="alignnone size-medium wp-image-1281 aligncenter" src="assets/doc/Blitz/Blitz-Fireblock.png" alt="LOGO" width="300" height="300"></p>
+              <p><img class="alignnone size-medium wp-image-1281 aligncenter" src="assets/doc/Blitz/Blitz-Fireblock.png"
+                  alt="LOGO" width="300" height="300"></p>
               <h3><b>Technical Specification</b></h3>
 
               <table id="tablepress-4" class="tablepress tablepress-id-4">
@@ -4258,7 +4638,8 @@ if (isset($_POST['submit'])) {
               <p style="text-align:center">For Details</p>
               <div style="text-align: center;">
                 <span style="margin: 6px 0px;" class="separator transparent">
-                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification" onclick="window.location.href='assets/doc/Blitz/Brosur Fireblock.pdf'">Download Brosur</a>
+                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification"
+                    onclick="window.location.href='assets/doc/Blitz/Brosur Fireblock.pdf'">Download Brosur</a>
                 </span>
               </div>
 
@@ -4432,9 +4813,9 @@ if (isset($_POST['submit'])) {
 
 
   <script type="text/javascript">
-    jQuery(document).ready(function($) {
+    jQuery(document).ready(function ($) {
 
-      jQuery(document).delegate(".pps-button-popup-733,a[href='pps-button-popup-733'],a[href='#pps-button-popup-733']", "click ", function(e) {
+      jQuery(document).delegate(".pps-button-popup-733,a[href='pps-button-popup-733'],a[href='#pps-button-popup-733']", "click ", function (e) {
         e.preventDefault();
 
         startAtNum = (jQuery(this).hasClass("pps-button-thumb")) ? jQuery(this).attr("class").split(" ").pop().replace(/[^0-9\.]/g, "") : 0;
@@ -4453,7 +4834,7 @@ if (isset($_POST['submit'])) {
           escClose: true,
           follow: [true, true],
           scrollBar: true,
-          onOpen: function() {
+          onOpen: function () {
             manageSizeEmbedPopupPress(706, 460);
             manageSizeIframePopupPress(706, 460);
             manageSizePdfPopupPress(706, 460);
@@ -4461,10 +4842,10 @@ if (isset($_POST['submit'])) {
             onOpenPopupPress(706);
             disclaimerPopupPress(706, "false", "same_page", "close_page", "false", "current_session", 1);
           },
-          onClose: function() {
+          onClose: function () {
             onClosePopupPress(733);
           },
-        }, function() {
+        }, function () {
           openedPopupPress(733);
         }); //end bPopup
 
@@ -4474,14 +4855,18 @@ if (isset($_POST['submit'])) {
   </script>
 
   <!-- I.X. R2 Security -->
-  <div id="popuppress-735" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":" 640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":" absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
+  <div id="popuppress-735" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":"
+    640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":"
+    absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
     <div class="pps-wrap">
-      <div class="pps-close"><a href="#" class="pps-close-link-735 pps-close-link" id="pps-close-link-735" title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
+      <div class="pps-close"><a href="#" class="pps-close-link-735 pps-close-link" id="pps-close-link-735"
+          title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
       <div class="pps-content">
         <div class="pps-single-popup">
           <li class="pps-item-content">
             <div class="pps-content-wp-editor entry-content post-content">
-              <p><img class="alignnone size-medium wp-image-1281 aligncenter" src="assets/doc/IX/I.X.-R2.png" alt="LOGO" width="300" height="300"></p>
+              <p><img class="alignnone size-medium wp-image-1281 aligncenter" src="assets/doc/IX/I.X.-R2.png" alt="LOGO"
+                  width="300" height="300"></p>
               <h3><b>Minimum Requirements</b></h3>
 
               <table id="tablepress-4" class="tablepress tablepress-id-4">
@@ -4520,7 +4905,8 @@ if (isset($_POST['submit'])) {
               <p style="text-align:center">For Details</p>
               <div style="text-align: center;">
                 <span style="margin: 6px 0px;" class="separator transparent">
-                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification" onclick="window.location.href='assets/doc/IX/Brosur I.X R2.pdf'">Download Brosur</a>
+                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification"
+                    onclick="window.location.href='assets/doc/IX/Brosur I.X R2.pdf'">Download Brosur</a>
                 </span>
               </div>
 
@@ -4694,9 +5080,9 @@ if (isset($_POST['submit'])) {
 
 
   <script type="text/javascript">
-    jQuery(document).ready(function($) {
+    jQuery(document).ready(function ($) {
 
-      jQuery(document).delegate(".pps-button-popup-735,a[href='pps-button-popup-735'],a[href='#pps-button-popup-735']", "click ", function(e) {
+      jQuery(document).delegate(".pps-button-popup-735,a[href='pps-button-popup-735'],a[href='#pps-button-popup-735']", "click ", function (e) {
         e.preventDefault();
 
         startAtNum = (jQuery(this).hasClass("pps-button-thumb")) ? jQuery(this).attr("class").split(" ").pop().replace(/[^0-9\.]/g, "") : 0;
@@ -4715,7 +5101,7 @@ if (isset($_POST['submit'])) {
           escClose: true,
           follow: [true, true],
           scrollBar: true,
-          onOpen: function() {
+          onOpen: function () {
             manageSizeEmbedPopupPress(706, 460);
             manageSizeIframePopupPress(706, 460);
             manageSizePdfPopupPress(706, 460);
@@ -4723,10 +5109,10 @@ if (isset($_POST['submit'])) {
             onOpenPopupPress(706);
             disclaimerPopupPress(706, "false", "same_page", "close_page", "false", "current_session", 1);
           },
-          onClose: function() {
+          onClose: function () {
             onClosePopupPress(735);
           },
-        }, function() {
+        }, function () {
           openedPopupPress(735);
         }); //end bPopup
 
@@ -4736,14 +5122,18 @@ if (isset($_POST['submit'])) {
   </script>
 
   <!-- PTT360 (Push-to-Talk over Cellular) -->
-  <div id="popuppress-737" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":" 640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":" absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
+  <div id="popuppress-737" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":"
+    640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":"
+    absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
     <div class="pps-wrap">
-      <div class="pps-close"><a href="#" class="pps-close-link-737 pps-close-link" id="pps-close-link-737" title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
+      <div class="pps-close"><a href="#" class="pps-close-link-737 pps-close-link" id="pps-close-link-737"
+          title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
       <div class="pps-content">
         <div class="pps-single-popup">
           <li class="pps-item-content">
             <div class="pps-content-wp-editor entry-content post-content">
-              <p><img class="alignnone size-medium wp-image-1281 aligncenter" src="assets/doc/IX/I.X.-R2.png" alt="LOGO" width="300" height="300"></p>
+              <p><img class="alignnone size-medium wp-image-1281 aligncenter" src="assets/doc/IX/I.X.-R2.png" alt="LOGO"
+                  width="300" height="300"></p>
               <h3><b>Minimum Requirements</b></h3>
 
               <table id="tablepress-4" class="tablepress tablepress-id-4">
@@ -4782,7 +5172,8 @@ if (isset($_POST['submit'])) {
               <p style="text-align:center">For Details</p>
               <div style="text-align: center;">
                 <span style="margin: 6px 0px;" class="separator transparent">
-                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification" onclick="window.location.href='assets/doc/IX/Brosur I.X R2.pdf'">Download Brosur</a>
+                  <a style="text-align:center" class="pps-btn pps-button-popup " title="Specification"
+                    onclick="window.location.href='assets/doc/IX/Brosur I.X R2.pdf'">Download Brosur</a>
                 </span>
               </div>
 
@@ -4956,9 +5347,9 @@ if (isset($_POST['submit'])) {
 
 
   <script type="text/javascript">
-    jQuery(document).ready(function($) {
+    jQuery(document).ready(function ($) {
 
-      jQuery(document).delegate(".pps-button-popup-737,a[href='pps-button-popup-737'],a[href='#pps-button-popup-737']", "click ", function(e) {
+      jQuery(document).delegate(".pps-button-popup-737,a[href='pps-button-popup-737'],a[href='#pps-button-popup-737']", "click ", function (e) {
         e.preventDefault();
 
         startAtNum = (jQuery(this).hasClass("pps-button-thumb")) ? jQuery(this).attr("class").split(" ").pop().replace(/[^0-9\.]/g, "") : 0;
@@ -4977,7 +5368,7 @@ if (isset($_POST['submit'])) {
           escClose: true,
           follow: [true, true],
           scrollBar: true,
-          onOpen: function() {
+          onOpen: function () {
             manageSizeEmbedPopupPress(706, 460);
             manageSizeIframePopupPress(706, 460);
             manageSizePdfPopupPress(706, 460);
@@ -4985,10 +5376,10 @@ if (isset($_POST['submit'])) {
             onOpenPopupPress(706);
             disclaimerPopupPress(706, "false", "same_page", "close_page", "false", "current_session", 1);
           },
-          onClose: function() {
+          onClose: function () {
             onClosePopupPress(737);
           },
-        }, function() {
+        }, function () {
           openedPopupPress(737);
         }); //end bPopup
 
@@ -4997,17 +5388,21 @@ if (isset($_POST['submit'])) {
     });
   </script>
 
-          
+
 
   <!-- I.X. R2 Security -->
-  <div id="popuppress-706" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":" 640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":" absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
+  <div id="popuppress-706" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px  " data-popuppress="{" width ":"
+    640 "," width_units ":" px "," height ":" auto "," height_units ":" px "," auto_height ":" true "," position ":"
+    absolute "," position_x ":" auto "," position_y ":" auto "," close_mouseleave ":" false "," class_run ":" "}">
     <div class="pps-wrap">
-      <div class="pps-close"><a href="#" class="pps-close-link-706 pps-close-link" id="pps-close-link-706" title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
+      <div class="pps-close"><a href="#" class="pps-close-link-706 pps-close-link" id="pps-close-link-706"
+          title="Close"><i class="pps-icon pps-icon-close"></i></a></div>
       <div class="pps-content">
         <div class="pps-single-popup">
           <li class="pps-item-content">
             <div class="pps-content-wp-editor entry-content post-content">
-              <p><img class="alignnone size-medium wp-image-1281 aligncenter" src="assets/img/logo.png" alt="LOGO" width="127" height="350"></p>
+              <p><img class="alignnone size-medium wp-image-1281 aligncenter" src="assets/img/logo.png" alt="LOGO"
+                  width="127" height="350"></p>
               <h3><b>C600</b></h3>
 
               <table id="tablepress-4" class="tablepress tablepress-id-4">
@@ -5241,139 +5636,143 @@ if (isset($_POST['submit'])) {
   </style>
 
   <!-- Conquest S29 Technical Specification -->
-<div id="popuppress-739" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px" data-popuppress='{"width":"640","width_units":"px","height":"auto","height_units":"px","auto_height":"true","position":"absolute","position_x":"auto","position_y":"auto","close_mouseleave":"false","class_run":""}'>
+  <div id="popuppress-739" class="pps-popup  pps-has-border pps-w-640-px pps-h-auto-px"
+    data-popuppress='{"width":"640","width_units":"px","height":"auto","height_units":"px","auto_height":"true","position":"absolute","position_x":"auto","position_y":"auto","close_mouseleave":"false","class_run":""}'>
     <div class="pps-wrap">
-        <div class="pps-close">
-            <a href="#" class="pps-close-link-739 pps-close-link" id="pps-close-link-739" title="Close">
-                <i class="pps-icon pps-icon-close"></i>
-            </a>
-        </div>
-        <div class="pps-content">
-            <div class="pps-single-popup">
-                <li class="pps-item-content">
-                    <div class="pps-content-wp-editor entry-content post-content">
-                        <p><img class="alignnone size-medium wp-image-1281 aligncenter" src="assets/img/clients/conquest.png" alt="Conquest S29 LOGO" width="300" height="300"></p>
-                        <h3><b>Technical Specification</b></h3>
+      <div class="pps-close">
+        <a href="#" class="pps-close-link-739 pps-close-link" id="pps-close-link-739" title="Close">
+          <i class="pps-icon pps-icon-close"></i>
+        </a>
+      </div>
+      <div class="pps-content">
+        <div class="pps-single-popup">
+          <li class="pps-item-content">
+            <div class="pps-content-wp-editor entry-content post-content">
+              <p><img class="alignnone size-medium wp-image-1281 aligncenter" src="assets/img/clients/conquest.png"
+                  alt="Conquest S29 LOGO" width="300" height="300"></p>
+              <h3><b>Technical Specification</b></h3>
 
-                        <table id="tablepress-739" class="tablepress tablepress-id-739">
-                            <tbody>
-                                <tr class="row-1">
-                                    <td class="column-1">System<br></td>
-                                    <td class="column-2">Android 11, 5G compatible<br></td>
-                                </tr>
-                                <tr class="row-2">
-                                    <td class="column-1">Memory<br></td>
-                                    <td class="column-2">8 GB RAM, 128 GB internal storage<br></td>
-                                </tr>
-                                <tr class="row-3">
-                                    <td class="column-1">Battery<br></td>
-                                    <td class="column-2">7600 mAh, large capacity<br></td>
-                                </tr>
-                                <tr class="row-4">
-                                    <td class="column-1">Cameras<br></td>
-                                    <td class="column-2">13 MP (rear) with night vision, front camera not specified<br></td>
-                                </tr>
-                                <tr class="row-5">
-                                    <td class="column-1">Additional Features<br></td>
-                                    <td class="column-2">Infrared thermal imaging, digital-analog DMR walkie-talkie, RFID, 1/2D barcode scanner, IP68 waterproof, NFC, flashlight, and temperature measurement.<br></td>
-                                </tr>
-                            </tbody>
-                        </table>
+              <table id="tablepress-739" class="tablepress tablepress-id-739">
+                <tbody>
+                  <tr class="row-1">
+                    <td class="column-1">System<br></td>
+                    <td class="column-2">Android 11, 5G compatible<br></td>
+                  </tr>
+                  <tr class="row-2">
+                    <td class="column-1">Memory<br></td>
+                    <td class="column-2">8 GB RAM, 128 GB internal storage<br></td>
+                  </tr>
+                  <tr class="row-3">
+                    <td class="column-1">Battery<br></td>
+                    <td class="column-2">7600 mAh, large capacity<br></td>
+                  </tr>
+                  <tr class="row-4">
+                    <td class="column-1">Cameras<br></td>
+                    <td class="column-2">13 MP (rear) with night vision, front camera not specified<br></td>
+                  </tr>
+                  <tr class="row-5">
+                    <td class="column-1">Additional Features<br></td>
+                    <td class="column-2">Infrared thermal imaging, digital-analog DMR walkie-talkie, RFID, 1/2D barcode
+                      scanner, IP68 waterproof, NFC, flashlight, and temperature measurement.<br></td>
+                  </tr>
+                </tbody>
+              </table>
 
-                        <p style="text-align:center">For Details</p>
-                        <div style="text-align: center;">
-                            <span style="margin: 6px 0px;" class="separator transparent">
-                                <a style="text-align:center" class="pps-btn pps-button-popup" title="Specification" onclick="window.location.href='assets/doc/Conquest_S29_Brochure.pdf'">Download Brochure</a>
-                            </span>
-                        </div>
-                    </div>
-                </li>
+              <p style="text-align:center">For Details</p>
+              <div style="text-align: center;">
+                <span style="margin: 6px 0px;" class="separator transparent">
+                  <a style="text-align:center" class="pps-btn pps-button-popup" title="Specification"
+                    onclick="window.location.href='assets/doc/Conquest_S29_Brochure.pdf'">Download Brochure</a>
+                </span>
+              </div>
             </div>
+          </li>
         </div>
+      </div>
     </div>
     <!--.pps-wrap-->
-</div>
+  </div>
 
-<!--.pps-popup-->
-<style type="text/css">
+  <!--.pps-popup-->
+  <style type="text/css">
     #popuppress-739 {
-        width: 640px;
-        height: auto;
-        border-radius: 7px;
-        border: solid 8px rgba(0, 0, 0, 0.4);
+      width: 640px;
+      height: auto;
+      border-radius: 7px;
+      border: solid 8px rgba(0, 0, 0, 0.4);
     }
 
     #popuppress-739 .pps-wrap {
-        padding: 15px 20px;
-        background-color: #FFFFFF;
-        border-radius: 5px;
+      padding: 15px 20px;
+      background-color: #FFFFFF;
+      border-radius: 5px;
     }
 
     #popuppress-739 .pps-close {
-        position: absolute;
-        top: -14px;
-        right: -14px;
+      position: absolute;
+      top: -14px;
+      right: -14px;
     }
 
     #popuppress-739 .pps-close a.pps-close-link {
-        width: 18px;
-        height: 18px;
-        background-color: #FFFFFF;
-        border-radius: 18px;
+      width: 18px;
+      height: 18px;
+      background-color: #FFFFFF;
+      border-radius: 18px;
     }
 
     #popuppress-739 .pps-close a.pps-close-link i.pps-icon:before {
-        font-size: 18px;
-        color: #999999;
+      font-size: 18px;
+      color: #999999;
     }
 
     a.pps-btn.pps-button-popup {
-        color: #FFF;
-        font-size: 15px;
-        line-height: 50px;
-        font-weight: 700;
-        padding: 5px 20px 4px;
-        background-color: #de3200;
-        border-radius: 30px;
-        text-transform: uppercase;
+      color: #FFF;
+      font-size: 15px;
+      line-height: 50px;
+      font-weight: 700;
+      padding: 5px 20px 4px;
+      background-color: #de3200;
+      border-radius: 30px;
+      text-transform: uppercase;
     }
 
     a.pps-btn.pps-button-popup:hover {
-        background-color: #7a0001;
+      background-color: #7a0001;
     }
-</style>
+  </style>
 
-<script type="text/javascript">
-    jQuery(document).ready(function($) {
-        jQuery(document).delegate(".pps-button-popup-739,a[href='pps-button-popup-739'],a[href='#pps-button-popup-739']", "click", function(e) {
-            e.preventDefault();
-            var pps_popup_739 = jQuery("#popuppress-739").bPopup({
-                closeClass: "pps-close-link-739",
-                easing: "swing",
-                modalClose: true,
-                modalColor: "#000000",
-                opacity: 0.75,
-                position: ["auto", "auto"],
-                speed: 300,
-                transition: "fadeIn",
-                zIndex: 99999,
-                onOpen: function() {
-                    manageSizeEmbedPopupPress(706, 460);
-                    manageSizeIframePopupPress(706, 460);
-                    manageSizePdfPopupPress(706, 460);
-                },
-                onClose: function() {}
-            });
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+      jQuery(document).delegate(".pps-button-popup-739,a[href='pps-button-popup-739'],a[href='#pps-button-popup-739']", "click", function (e) {
+        e.preventDefault();
+        var pps_popup_739 = jQuery("#popuppress-739").bPopup({
+          closeClass: "pps-close-link-739",
+          easing: "swing",
+          modalClose: true,
+          modalColor: "#000000",
+          opacity: 0.75,
+          position: ["auto", "auto"],
+          speed: 300,
+          transition: "fadeIn",
+          zIndex: 99999,
+          onOpen: function () {
+            manageSizeEmbedPopupPress(706, 460);
+            manageSizeIframePopupPress(706, 460);
+            manageSizePdfPopupPress(706, 460);
+          },
+          onClose: function () { }
         });
+      });
     });
-</script>
+  </script>
 
 
 
   <script type="text/javascript">
-    jQuery(document).ready(function($) {
+    jQuery(document).ready(function ($) {
 
-      jQuery(document).delegate(".pps-button-popup-706,a[href='pps-button-popup-706'],a[href='#pps-button-popup-706']", "click ", function(e) {
+      jQuery(document).delegate(".pps-button-popup-706,a[href='pps-button-popup-706'],a[href='#pps-button-popup-706']", "click ", function (e) {
         e.preventDefault();
 
         startAtNum = (jQuery(this).hasClass("pps-button-thumb")) ? jQuery(this).attr("class").split(" ").pop().replace(/[^0-9\.]/g, "") : 0;
@@ -5392,7 +5791,7 @@ if (isset($_POST['submit'])) {
           escClose: true,
           follow: [true, true],
           scrollBar: true,
-          onOpen: function() {
+          onOpen: function () {
             manageSizeEmbedPopupPress(706, 460);
             manageSizeIframePopupPress(706, 460);
             manageSizePdfPopupPress(706, 460);
@@ -5400,10 +5799,10 @@ if (isset($_POST['submit'])) {
             onOpenPopupPress(706);
             disclaimerPopupPress(706, "false", "same_page", "close_page", "false", "current_session", 1);
           },
-          onClose: function() {
+          onClose: function () {
             onClosePopupPress(706);
           },
-        }, function() {
+        }, function () {
           openedPopupPress(706);
         }); //end bPopup
 
@@ -5412,7 +5811,7 @@ if (isset($_POST['submit'])) {
     });
   </script>
 
-  
+
 
 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
@@ -5445,12 +5844,12 @@ if (isset($_POST['submit'])) {
   <script type="text/javascript" src="assets/vendor/popup-press/js/pps_script_ver=2.9.7.js"></script>
   <script type="text/javascript" src="assets/vendor/popup-press/wp-embed.min_ver=5.2.11.js"></script>
   <script type="text/javascript">
-    jQuery(document).ready(function($) {
-      $(".pps-popup").on("ppsOnOpen", function(e) {
+    jQuery(document).ready(function ($) {
+      $(".pps-popup").on("ppsOnOpen", function (e) {
         //Do something when you open any popups
       });
 
-      $("#popuppress-5").on("ppsOnClose", function(e) {
+      $("#popuppress-5").on("ppsOnClose", function (e) {
         //Do something when you close the popup id = 5
       });
     });
